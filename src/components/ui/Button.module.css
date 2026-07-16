@@ -1,0 +1,21 @@
+@keyframes pulseRing {
+  0%, 100% { background-position: 0% 50%; opacity: 0.15; }
+  50% { background-position: 100% 50%; opacity: 0.35; }
+}
+
+.btnPrimary::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(218,41,28,0.5), rgba(218,41,28,0.1), rgba(218,41,28,0.5));
+  background-size: 200% 200%;
+  z-index: -1;
+  animation: pulseRing 2.5s ease-in-out infinite;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.btnPrimary:hover::before {
+  opacity: 0.6;
+}

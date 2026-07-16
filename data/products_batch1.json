@@ -1,0 +1,370 @@
+[
+    {
+        "beforeEn":  "Process engineers manually fetched MES data based on ER/BOM changes. Large data volume with omission risk. 20+ people, ~2 hours each daily",
+        "id":  "ai-mfg-change",
+        "before":  "工艺工程师每天根据ER流程和BOM变更从MES获取数据，人工校验数据量大、存在遗漏风险，20+人力每人每天约2小时",
+        "after":  "AI定时更新数据源--工程师变更配置表格--AI校验--工程师确认校验结果--AI接口自动写入MES，错误识别率提升95%，处理时长缩短90%",
+        "techStack":  [
+                          "Python",
+                          "LLM",
+                          "MES",
+                          "RPA"
+                      ],
+        "nameEn":  "AI-Powered MES Process Configuration",
+        "excerptEn":  "AI validates MES process configurations with pre/post dual verification",
+        "status":  "published",
+        "benefits":  [
+                         {
+                             "label":  "错误识别率",
+                             "unit":  "%",
+                             "labelEn":  "Error Detection",
+                             "value":  95
+                         },
+                         {
+                             "label":  "处理时长缩短",
+                             "unit":  "%",
+                             "labelEn":  "Processing Time Reduction",
+                             "value":  90
+                         },
+                         {
+                             "label":  "覆盖工程师",
+                             "unit":  "+",
+                             "labelEn":  "Engineers Covered",
+                             "value":  20
+                         }
+                     ],
+        "description":  "项目分为事前校验和事后校验两个阶段，第一阶段已交付，第二阶段正在开发中。AI定时更新数据源，工程师变更配置表格后AI自动校验，工程师确认结果后可自动写入MES。覆盖20+工艺工程师，处理时长缩短90%。",
+        "recommended":  true,
+        "categoryEn":  "Smart Factory",
+        "excerpt":  "AI校验MES工艺配置，事前事后双重校验，降低错漏风险",
+        "afterEn":  "AI scheduled data update → engineer config change → AI validation → engineer confirm → auto-write to MES. Error detection +95%, processing time -90%",
+        "name":  "AI在大制造场工艺配置变更的深度应用",
+        "descriptionEn":  "Two-phase project covering pre-verification and post-verification. Phase 1 delivered, Phase 2 in development. AI auto-updates data sources, validates engineer configuration changes, and auto-writes to MES after confirmation. Covers 20+ process engineers with 90% time reduction.",
+        "thumb":  "/uploads/thumbnails/ai-mfg-change.png",
+        "category":  "智能工厂"
+    },
+    {
+        "beforeEn":  "Manual recording and post-visit data entry. Sales + admin repeatedly confirmed. Single visit documentation: 30-60 minutes",
+        "id":  "smart-service-ai",
+        "before":  "人工记录，事后补录。拜访后手工整理，重复录客户、联系人、商机和待办。销售+内勤反复确认，单次拜访整理约30-60分钟",
+        "after":  "AI整理确认入库，客户匹配→拜访→商机/客诉→得分→待办闭环。表单生成压缩到5-10分钟，字段标准化、记录可追踪",
+        "techStack":  [
+                          "Python",
+                          "LLM",
+                          "CRM",
+                          "WeChat"
+                      ],
+        "nameEn":  "Smart Service AI",
+        "excerptEn":  "AI organizes visit records, auto-captures opportunities and complaints",
+        "status":  "published",
+        "benefits":  [
+                         {
+                             "label":  "整理时间缩短",
+                             "unit":  "%",
+                             "labelEn":  "Documentation Time Reduction",
+                             "value":  85
+                         },
+                         {
+                             "label":  "线索当天入系统",
+                             "unit":  "%",
+                             "labelEn":  "Same-Day Lead Entry",
+                             "value":  100
+                         }
+                     ],
+        "description":  "智服务AI预计本周五上线测试服务。将传统的人工记录、事后补录模式升级为AI整理确认入库：客户匹配→拜访→商机/客诉→得分→待办闭环。拜访整理时间从30-60分钟压缩至5-10分钟，字段标准化、记录可追踪。",
+        "recommended":  true,
+        "categoryEn":  "Smart Service",
+        "excerpt":  "AI整理拜访记录，自动获取商机与客诉，闭环跟进",
+        "afterEn":  "AI organizes and confirms data entry. Form generation compressed to 5-10 minutes. Standardized fields with trackable records",
+        "name":  "智服务AI",
+        "descriptionEn":  "Smart Service AI launching test service this week. Upgrades manual post-visit recording to AI-organized confirmation workflow: customer matching → visit → opportunity/complaint → scoring → task closure. Visit documentation time reduced from 30-60 min to 5-10 min.",
+        "thumb":  "/uploads/thumbnails/smart-service-ai.png",
+        "category":  "智能服务"
+    },
+    {
+        "beforeEn":  "Traditional web pages displaying quality analysis data through charts",
+        "id":  "quality-early-ai",
+        "before":  "传统Web页面，通过图表形式展示质量分析数据",
+        "after":  "对话问答形式展现，AI自动生成分析结论和可视化",
+        "techStack":  [
+                          "Python",
+                          "LLM",
+                          "Skill",
+                          "RAG"
+                      ],
+        "nameEn":  "Early Quality Issue AI Analysis",
+        "excerptEn":  "Conversational quality analysis replacing traditional web dashboards",
+        "status":  "published",
+        "benefits":  [
+                         {
+                             "label":  "交互体验升级",
+                             "unit":  "%",
+                             "labelEn":  "UX Improvement",
+                             "value":  100
+                         }
+                     ],
+        "description":  "将之前的质量分析页面修改为Skill技能对话形式展示。用户通过自然语言对话查询质量分析数据，AI自动生成分析结论和可视化图表，替代传统的Web页面图表展示模式。",
+        "recommended":  false,
+        "categoryEn":  "Smart Quality",
+        "excerpt":  "对话式质量分析展示，替代传统Web图表",
+        "afterEn":  "Conversational Q\u0026A format with AI auto-generating analysis and visualizations",
+        "name":  "质量早期问题-AI智能分析",
+        "descriptionEn":  "Upgraded quality analysis from traditional web dashboards to conversational AI Skill format. Users query quality data via natural language dialogue, with AI auto-generating analysis conclusions and visualizations.",
+        "thumb":  "/uploads/thumbnails/quality-early-ai.png",
+        "category":  "智能质量"
+    },
+    {
+        "beforeEn":  "Each buyer manually checks 300+ suppliers. Cannot achieve full coverage. Information lag with management risks",
+        "id":  "supplier-audit-ai",
+        "before":  "每个采购员人工检查300+供应商，人工无法全量检查，信息滞后，有管理风险",
+        "after":  "供应商状态自动检测，风险主动上报；资质自动审计，到期提醒；供应商风险大屏",
+        "techStack":  [
+                          "Python",
+                          "LLM",
+                          "OCR",
+                          "Dashboard"
+                      ],
+        "nameEn":  "Supplier Qualification Audit AI",
+        "excerptEn":  "Auto-detect supplier status, proactive risk reporting, auto qualification audit",
+        "status":  "published",
+        "benefits":  [
+                         {
+                             "label":  "降低风险",
+                             "unit":  "%",
+                             "labelEn":  "Risk Reduction",
+                             "value":  80
+                         },
+                         {
+                             "label":  "效率提升",
+                             "unit":  "%",
+                             "labelEn":  "Efficiency Gain",
+                             "value":  90
+                         }
+                     ],
+        "description":  "原型已开发，功能性测试调试中。解决每个采购员人工检查300+供应商的痛点，实现供应商状态自动检测、风险主动上报、资质自动审计与到期提醒，并配有供应商风险大屏。",
+        "recommended":  true,
+        "categoryEn":  "Smart Service",
+        "excerpt":  "供应商状态自动检测，风险主动上报，资质自动审计",
+        "afterEn":  "Auto supplier status detection with proactive risk alerts. Auto qualification audit with expiry reminders. Supplier risk dashboard",
+        "name":  "供应商资质审核",
+        "descriptionEn":  "Prototype developed, functional testing in progress. Addresses the pain point of each buyer manually checking 300+ suppliers. Auto-detects supplier status, proactively reports risks, auto-audits qualifications with expiry reminders, plus supplier risk dashboard.",
+        "thumb":  "/uploads/thumbnails/supplier-audit-ai.png",
+        "category":  "智能服务"
+    },
+    {
+        "beforeEn":  "On-site repair heavily dependent on individual engineer experience. Manual lookup and parts search were fragmented. Long downtime dragging OEE",
+        "id":  "repair-master",
+        "before":  "现场维修高度依赖工程师个人经验，查阅手册、检索备件流程繁琐割裂，设备停机时间长，拖累产线OEE",
+        "after":  "深度融合大模型与智能体架构，维修知识自学习、多模态故障识别、图形化报告生成，维修效率提升50%，整体维修能力提升20%",
+        "techStack":  [
+                          "Python",
+                          "DeepSeek v4",
+                          "Herness",
+                          "LLM",
+                          "MES"
+                      ],
+        "nameEn":  "Repair Master AI",
+        "excerptEn":  "Integrated repair Q\u0026A, spare parts lookup, and multimodal fault diagnosis",
+        "status":  "published",
+        "benefits":  [
+                         {
+                             "label":  "维修效率提升",
+                             "unit":  "%",
+                             "labelEn":  "Repair Efficiency",
+                             "value":  50
+                         },
+                         {
+                             "label":  "整体维修能力提升",
+                             "unit":  "%",
+                             "labelEn":  "Overall Capability",
+                             "value":  20
+                         },
+                         {
+                             "label":  "设备OEE提升",
+                             "unit":  "%",
+                             "labelEn":  "OEE Improvement",
+                             "value":  15
+                         }
+                     ],
+        "description":  "当前已开发至2.0版本，集成了维修知识问答、备件库存查询、采购流程查询、线稿图生成等功能。深度融合DeepSeek v4大模型与Herness智能体架构，构建具备长短期记忆、自主思考决策及自进化能力的认知中枢，支持多模态故障识别及图形化报告生成。维修效率提升50%，整体维修能力提升20%。",
+        "recommended":  true,
+        "categoryEn":  "Smart Factory",
+        "excerpt":  "维修知识问答、备件查询、多模态故障识别一体化平台",
+        "afterEn":  "Deep LLM and agent integration. Self-learning repair knowledge, multimodal fault recognition, graphical reports. Repair efficiency +50%, overall capability +20%",
+        "name":  "维修大师",
+        "descriptionEn":  "Version 2.0 with integrated repair Q\u0026A, spare parts inventory lookup, procurement query, and sketch generation. Deep integration with DeepSeek v4 and Herness agent architecture. Built cognitive hub with LSTM, autonomous decision-making, and self-evolution. Supports multimodal fault diagnosis and graphical report generation. Repair efficiency +50%, overall capability +20%.",
+        "thumb":  "/uploads/thumbnails/repair-master.png",
+        "category":  "智能工厂"
+    },
+    {
+        "beforeEn": "Data processing was entirely manual — dedicated staff exported raw data from multiple systems daily, manually cleaned, verified, and corrected missing values in Excel, consuming 3+ hours per session. Inconsistent part and order data required cross-team phone verification, with a single confirmation taking at least half a day — errors and delays were frequent. MES lacked automatic CPK calculation capability; station process capability was only manually summarized once a month, with issues discovered 30 days late. No real-time process alert mechanism existed — assembly anomalies were only found during month-end manual analysis. IPV stations had no pre-release full-volume engine data verification, allowing products with process or parameter anomalies to complete the entire workflow and even ship to customers. Daily/weekly/monthly quality reports were entirely manually compiled, with a single complete report taking 4 hours.",
+        "id": "elm-ai-analysis",
+        "before": "数据全手工处理，每日需专人导出多系统原始数据，通过Excel手工清洗、核对、修正缺失值，单次均耗时3小时以上。零件、订单数据不一致时，需跨班组电话逐一核对，单次数据确认至少耗时半天，数据错漏、滞后问题频发。MES无自动CPK计算能力，仅能每月人工汇总1次工位工序能力，问题发现滞后30天。无实时过程预警机制，装配过程异常仅能月底人工分析发现。IPV工位无全量发动机装配数据前置校验机制，工艺、参数异常产品易完成全工序流转，甚至直接出库流向市场。日报/周报/月度质量报告全部依赖人工汇总制表，单次完整报表制作需4小时。",
+        "after": "数据全自动处理，系统实时采集、自动清洗校验全流程无需人工干预，彻底消除手工数据处理工时。系统自动完成多源数据匹配校验，无需电话线下核对数据，从源头保障数据一致性与准确性。各工位、SO订单、零部件的过程能力指数及时更新，前一日装配质量当日可查，分析时效性提升95%。装配过程中工艺参数偏离标准即刻触发告警，实现在线拦截潜在不良，避免不合格品流转。实现发动机出库前全量IPV装配数据自动校验，有效识别异常数据并及时拦截，从源头杜绝问题整机出库，规避下游质量风险。各类质量分析报表自动生成，无需人工汇总整理，按时自动推送，彻底释放报表编制工时。",
+        "techStack": [
+            "Python",
+            "LLM",
+            "MES",
+            "InfluxDB"
+        ],
+        "nameEn": "IPV Intelligent Analysis Platform",
+        "excerptEn": "Engine assembly quality process capability analysis & anomaly control — full-dimension CPK/PPK auto-analysis, real-time alerts & precise traceability",
+        "status": "published",
+        "benefits": [
+            {
+                "label": "人力成本年节约",
+                "labelEn": "Annual Labor Cost Savings",
+                "unit": "%",
+                "value": 59
+            },
+            {
+                "label": "异常发现周期缩短",
+                "labelEn": "Anomaly Discovery Cycle Reduction",
+                "unit": "%",
+                "value": 95
+            },
+            {
+                "label": "溯源效率提升",
+                "labelEn": "Traceability Efficiency Gain",
+                "unit": "%",
+                "value": 99.8
+            },
+            {
+                "label": "报表工作量减少",
+                "labelEn": "Report Workload Reduction",
+                "unit": "%",
+                "value": 50
+            },
+            {
+                "label": "工位管控覆盖率",
+                "labelEn": "Station Coverage Rate",
+                "unit": "%",
+                "value": 100
+            }
+        ],
+        "description": "针对当前发动机装配过程中数据处理依赖人工、工序能力分析滞后、质量异常无法实时预警、报表制作成本高、工位管控覆盖不全等痛点，我们构建了IPV智能分析平台。该平台基于工位MES实时装配记录、零部件信息、生产订单及设备传感器采集数据，实现了自动化数据清洗校验、全维度过程能力自动分析、精准缺陷溯源定位、异常实时预警推送、多维度可视化报表看板等核心能力，显著提升了装配质量管理的智能化水平。同时，平台支持历史数据追溯查询，能够按时间回溯全年装配质量数据，并根据不同量级及岗位自动推送标准化质量分析报告。",
+        "recommended": true,
+        "categoryEn": "Smart Factory",
+        "excerpt": "发动机装配质量过程能力分析与异常管控，实现全维度CPK/PPK自动分析、实时预警与精准溯源",
+        "afterEn": "Fully automated data processing — real-time collection, automatic cleaning and validation with zero manual intervention, completely eliminating manual data processing hours. The system automatically performs multi-source data matching and verification, eliminating phone-based cross-checking and ensuring data consistency and accuracy at the source. Process capability indices for each station, SO order, and part are updated in real time — the previous day's assembly quality is available same-day, improving analysis timeliness by 95%. Process parameter deviations during assembly trigger immediate alerts, enabling online interception of potential defects and preventing non-conforming product flow. Full-volume IPV assembly data is automatically verified before engine release, effectively identifying and intercepting anomalies at the source to prevent defective engines from leaving the plant. All quality analysis reports are auto-generated and pushed on schedule without manual compilation, fully freeing up report preparation hours.",
+        "name": "IPV智能分析平台",
+        "descriptionEn": "To address pain points in engine assembly — manual data processing, lagging process capability analysis, lack of real-time quality anomaly alerts, high report generation costs, and incomplete station coverage — we built the IPV Intelligent Analysis Platform. Leveraging real-time MES station assembly records, part information, production orders, and equipment sensor data, the platform delivers automated data cleaning & validation, full-dimension process capability auto-analysis (CPK/PPK), precise defect tracing & root cause localization, real-time anomaly alert push, and multi-dimensional visualization dashboards. It also supports historical data traceability across the full year and auto-pushes standardized quality analysis reports based on volume and role.",
+        "thumb": "/uploads/thumbnails/elm-ai-analysis.png",
+        "category": "智能工厂"
+    },
+    {
+        "beforeEn":  "Earlier version based on Dify and AIPPT, requiring paid subscription",
+        "id":  "ai-ppt",
+        "before":  "最早版本基于Dify和AIPPT实现，需要付费",
+        "after":  "基于输入主题、上传文件，自动生成完整HTML版PPT，自主配图，可在线编辑、导出至本地，除模型费用外无需其他支出",
+        "techStack":  [
+                          "Python",
+                          "LLM",
+                          "HTML",
+                          "RAG"
+                      ],
+        "nameEn":  "AI PPT Generator",
+        "excerptEn":  "Auto-generate HTML PPT from topics with auto image matching and online editing",
+        "status":  "published",
+        "benefits":  [
+                         {
+                             "label":  "费用节省",
+                             "unit":  "%",
+                             "labelEn":  "Cost Savings",
+                             "value":  100
+                         }
+                     ],
+        "description":  "基本的生成大纲、大纲预览、PPT生成、自主配图、在线预览、下载到本地功能已实现。基于输入的主题和上传的文件，自动生成完整HTML版本的PPT，可在线编辑、导出至本地。除调用模型产生的费用外，无需支付其他费用。",
+        "recommended":  false,
+        "categoryEn":  "Efficiency Tools",
+        "excerpt":  "基于主题自动生成完整HTML版PPT，自主配图，可在线编辑导出",
+        "afterEn":  "Auto-generates complete HTML PPT from topics and files with auto image matching. Online editing and local export. No costs beyond model API fees",
+        "name":  "AI PPT",
+        "descriptionEn":  "Core features implemented: outline generation, preview, PPT generation, auto image matching, online preview, and local download. Generates complete HTML PPT from input topics and uploaded files. Online editing and local export supported. No additional costs beyond model API calls.",
+        "thumb":  "/uploads/thumbnails/ai-ppt.png",
+        "category":  "效率工具"
+    },
+    {
+        "beforeEn":  "Material check only covered work orders, 14-day range, no deviation factors. Rigid interface without proactive features",
+        "id":  "ai-material-check",
+        "before":  "核料只包含工单不包含预审，只有未来14天范围，不包含偏离因素，界面呆板缺乏主动交互",
+        "after":  "时间范围扩展到未来1-2个月，加入偏离因素，主动推送信息，大幅减少16个计划员工作量",
+        "techStack":  [
+                          "Python",
+                          "OA",
+                          "MES",
+                          "ERP"
+                      ],
+        "nameEn":  "AI Material Verification",
+        "excerptEn":  "Extended material check range with proactive push notifications",
+        "status":  "published",
+        "benefits":  [
+                         {
+                             "label":  "每日节省工时",
+                             "unit":  " 小时",
+                             "labelEn":  "Daily Time Saved",
+                             "value":  16
+                         },
+                         {
+                             "label":  "覆盖计划员",
+                             "unit":  " 人",
+                             "labelEn":  "Planners Covered",
+                             "value":  16
+                         }
+                     ],
+        "description":  "原核料计算逻辑已在BFCECDW拆解并进行三级复原，OA报表已按需求日期拆解到日。当前优化方向：将时间范围从未来14天扩展到一到两个月，加入偏离因素，从被动查询改为主动推送，覆盖16个计划员，每天可节省约一个小时工时。",
+        "recommended":  false,
+        "categoryEn":  "Smart Factory",
+        "excerpt":  "扩展核料时间范围，主动推送，减少计划员工时",
+        "afterEn":  "Range extended to 1-2 months with deviation factors. Proactive push notifications. Significantly reduces 16 planners\u0027 workload",
+        "name":  "AI核料",
+        "descriptionEn":  "Original material calculation logic decomposed and restored at BFCECDW. OA reports broken down to daily level. Optimization: extend time range from 14 days to 1-2 months, add deviation factors, shift from passive query to proactive push. Covers 16 planners, saving ~1 hour daily each.",
+        "thumb":  "/uploads/thumbnails/ai-material-check.png",
+        "category":  "智能工厂"
+    },
+    {
+        "beforeEn":  "Manual integration of 10+ data sources. Manual field alignment, multi-level filtering. Frequent ad-hoc analysis. Market intelligence collection scattered and irregular",
+        "id":  "market-ai",
+        "before":  "手动整合十几个数据来源，人工对齐字段、多级筛选，临时分析需求频繁，市场情报搜集庞杂且周期不定",
+        "after":  "秒级自动接入多源数据，任意维度组合查询1分钟内完成，80%临时分析需求从60分钟缩短至1分钟，情报每日自动汇总",
+        "techStack":  [
+                          "Python",
+                          "LLM",
+                          "SQL",
+                          "ETL",
+                          "Dashboard"
+                      ],
+        "nameEn":  "Market \u0026 Business AI Application",
+        "excerptEn":  "Multi-source data integration in seconds with AI auto-analysis",
+        "status":  "published",
+        "benefits":  [
+                         {
+                             "label":  "数据清洗提速",
+                             "unit":  "%",
+                             "labelEn":  "Data Cleaning Speedup",
+                             "value":  99
+                         },
+                         {
+                             "label":  "分析时间缩短",
+                             "unit":  "%",
+                             "labelEn":  "Analysis Time Reduction",
+                             "value":  95
+                         },
+                         {
+                             "label":  "数据错误率降低",
+                             "unit":  "%",
+                             "labelEn":  "Error Rate Reduction",
+                             "value":  95
+                         }
+                     ],
+        "description":  "项目分为一期和二期，一期核心功能已开发完成。从手工模式升级为自动化数据流水线与AI智能分析，系统解决多源、多维度、多频次、多深度的商用汽车市场分析难题。数据清洗从每周6-10小时缩短至5分钟，临时分析从60分钟缩短至1分钟。",
+        "recommended":  true,
+        "categoryEn":  "Data Analytics",
+        "excerpt":  "秒级整合多源数据，AI自动分析与归因，决策响应提速",
+        "afterEn":  "Auto multi-source ingestion in seconds. Any-dimension queries \u003c1 min. 80% ad-hoc analysis from 60 min to 1 min. Daily auto intelligence summary",
+        "name":  "市场和业务AI应用",
+        "descriptionEn":  "Phase 1 core features completed. Upgrades from manual to automated data pipeline with AI analysis, solving multi-source, multi-dimension, multi-frequency commercial vehicle market analysis challenges. Data cleaning reduced from 6-10 hours weekly to 5 minutes. Ad-hoc analysis from 60 min to 1 min.",
+        "thumb":  "/uploads/thumbnails/market-ai.png",
+        "category":  "数据分析"
+    }
+]

@@ -1,0 +1,130 @@
+[
+    {
+        "beforeEn":  "Traditional troubleshooting: open bastion → select host → SSH → think commands → type → read output → self-analyze",
+        "id":  "ops-assistant",
+        "before":  "传统运维排查故障：打开堡垒机→选主机→SSH进去→想命令→敲命令→看输出→自己分析",
+        "after":  "登录助手平台→选主机→执行诊断命令→输出根因报告+修复方案，减少操作步骤，提高效率",
+        "techStack":  [
+                          "Python",
+                          "SSH",
+                          "Agent",
+                          "Terminal"
+                      ],
+        "nameEn":  "Ops Assistant",
+        "excerptEn":  "Unified login, intelligent diagnosis, root cause reports with fix plans",
+        "status":  "published",
+        "benefits":  [
+                         {
+                             "label":  "操作步骤减少",
+                             "unit":  "%",
+                             "labelEn":  "Steps Reduction",
+                             "value":  80
+                         }
+                     ],
+        "description":  "实现统一登录、智能诊断、交互终端，安全管控优化中。将传统运维排查故障的多步操作（打开堡垒机→选主机→SSH→想命令→敲命令→看输出→自己分析）简化为：登录助手平台→选主机→执行诊断命令→输出根因报告+修复方案，大幅减少操作步骤。",
+        "recommended":  false,
+        "categoryEn":  "Smart Platform",
+        "excerpt":  "统一登录，智能诊断，输出根因报告与修复方案",
+        "afterEn":  "Login assistant → select host → run diagnostic → output root cause report + fix plan. Fewer steps, higher efficiency",
+        "name":  "运维助手",
+        "descriptionEn":  "Implemented unified login, intelligent diagnosis, and interactive terminal. Security hardening in progress. Simplifies traditional multi-step troubleshooting (bastion→host→SSH→think→type→read→analyze) to: login assistant→select host→run diagnostic→output root cause report + fix plan.",
+        "thumb":  "/uploads/thumbnails/ops-assistant.png",
+        "category":  "智能平台"
+    },
+    {
+        "beforeEn":  "HR needed to review massive resumes during campus recruitment. Finding matching talent consumed significant time",
+        "id":  "cv-resume-screening",
+        "before":  "人力资源面对校招时需要审阅大量简历材料，想要精确找到匹配人才需耗费大量时间",
+        "after":  "AI一键批量上传智能匹配，给出评估排名和岗位适配度评分，效率提升5倍",
+        "techStack":  [
+                          "Python",
+                          "LLM",
+                          "NLP",
+                          "HRIS"
+                      ],
+        "nameEn":  "Batch Resume AI Screening",
+        "excerptEn":  "One-click batch upload, AI matching, ranking and fit scoring",
+        "status":  "published",
+        "benefits":  [
+                         {
+                             "label":  "效率提升",
+                             "unit":  "%",
+                             "labelEn":  "Efficiency Gain",
+                             "value":  500
+                         }
+                     ],
+        "description":  "已开发出功能代码等待测试。解决人力资源面对校招时需要审阅大量简历材料的痛点。通过AI实现一键批量上传智能匹配，给出评估排名和岗位适配度评分，效率提升5倍。",
+        "recommended":  false,
+        "categoryEn":  "Efficiency Tools",
+        "excerpt":  "一键批量上传，AI智能匹配、评估排名与适配度评分",
+        "afterEn":  "AI one-click batch upload with intelligent matching. Evaluation ranking and job fit scoring. 5x efficiency improvement",
+        "name":  "批量简历智能筛选",
+        "descriptionEn":  "Feature code developed, awaiting testing. Addresses HR pain point of reviewing massive resumes during campus recruitment. AI enables one-click batch upload with intelligent matching, evaluation ranking, and job fit scoring. 5x efficiency improvement.",
+        "thumb":  "/uploads/thumbnails/cv-resume-screening.png",
+        "category":  "效率工具"
+    },
+    {
+        "beforeEn":  "IT staff performed daily physical inspection at new plant server room",
+        "id":  "server-room-inspection",
+        "before":  "IT同事每天到新厂机房巡检",
+        "after":  "每天自动发送实时湿度、温度、空调、UPS情况，查看机房实时监控，无需每天去新厂人工巡检",
+        "techStack":  [
+                          "Python",
+                          "IoT",
+                          "Monitor",
+                          "Alert"
+                      ],
+        "nameEn":  "Server Room Inspection Notifier",
+        "excerptEn":  "Daily auto-report on temperature, humidity, AC, UPS status with live monitoring",
+        "status":  "published",
+        "benefits":  [
+                         {
+                             "label":  "自动化巡检",
+                             "unit":  "%",
+                             "labelEn":  "Auto Inspection",
+                             "value":  100
+                         }
+                     ],
+        "description":  "联动动环和监控查看机房情况。替代IT同事每天到新厂机房巡检的工作，改为每天自动发送实时湿度、温度、空调、UPS情况，以及查看机房实时监控，确认人员逗留情况，无需每天去新厂人工巡检。",
+        "recommended":  false,
+        "categoryEn":  "Smart Platform",
+        "excerpt":  "每日自动发送温湿度、空调、UPS状态与实时监控",
+        "afterEn":  "Daily auto real-time humidity, temperature, AC, UPS status with live surveillance. No more daily manual inspection",
+        "name":  "机房巡检通知",
+        "descriptionEn":  "Integrates environmental monitoring and surveillance for server room oversight. Replaces daily manual IT inspection at the new plant. Auto-sends daily real-time humidity, temperature, AC, UPS status, plus live surveillance to check personnel presence. No more daily manual inspection trips.",
+        "thumb":  "/uploads/thumbnails/server-room-inspection.png",
+        "category":  "智能平台"
+    },
+    {
+        "beforeEn":  "Previously had to navigate platform menus by department to create tasks",
+        "id":  "workflow-creator",
+        "before":  "之前只能通过平台去找各个部门流程进行任务创建",
+        "after":  "在对话框里根据流程名称就可以找到要创建流程的表单，提高效率",
+        "techStack":  [
+                          "Python",
+                          "LLM",
+                          "Workflow",
+                          "RPA"
+                      ],
+        "nameEn":  "Workflow Creator",
+        "excerptEn":  "Conversational workflow creation with quick form lookup by name",
+        "status":  "published",
+        "benefits":  [
+                         {
+                             "label":  "查找效率提升",
+                             "unit":  "%",
+                             "labelEn":  "Lookup Efficiency",
+                             "value":  90
+                         }
+                     ],
+        "description":  "通过对话创建流程，将表单打开。改变之前只能通过平台去找各个部门流程进行任务创建的方式。现在在对话框里根据流程名称就可以找到要创建流程的表单，提高效率。",
+        "recommended":  false,
+        "categoryEn":  "Efficiency Tools",
+        "excerpt":  "对话式创建流程，根据名称快速定位表单",
+        "afterEn":  "Find workflow forms by name in the chat dialog, improving efficiency",
+        "name":  "创建workflow流程",
+        "descriptionEn":  "Create workflows through conversation. Changes the previous approach of navigating platform menus by department to find and create tasks. Now simply type the workflow name in the chat dialog to find the form, significantly improving efficiency.",
+        "thumb":  "/uploads/thumbnails/workflow-creator.png",
+        "category":  "效率工具"
+    }
+]

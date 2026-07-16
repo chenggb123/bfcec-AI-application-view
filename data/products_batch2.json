@@ -1,0 +1,162 @@
+[
+    {
+        "beforeEn":  "Each business project required separate agent development, creating a chaotic landscape",
+        "id":  "ai-platform",
+        "before":  "业务项目都需要单独开发Agent，相对混乱",
+        "after":  "业务项目内的Agent统一由中台管理运行，便于监控和节省开发时间",
+        "techStack":  [
+                          "Python",
+                          "LLM",
+                          "MCP",
+                          "RAG",
+                          "K8s"
+                      ],
+        "nameEn":  "AI Middle Platform",
+        "excerptEn":  "Unified agent management for monitoring and development efficiency",
+        "status":  "published",
+        "benefits":  [
+                         {
+                             "label":  "开发效率提升",
+                             "unit":  "%",
+                             "labelEn":  "Dev Efficiency",
+                             "value":  50
+                         }
+                     ],
+        "description":  "项目已经初步上线，基本聊天功能可用，正在完善skill/mcp/kb/rag相关联调。将业务项目内的Agent统一由中台管理运行，便于监控和节省开发时间，避免各业务项目单独开发Agent的混乱局面。",
+        "recommended":  false,
+        "categoryEn":  "Smart Platform",
+        "excerpt":  "统一管理业务Agent，便于监控和节省开发时间",
+        "afterEn":  "All business project agents unified under central platform management for better monitoring and reduced dev time",
+        "name":  "AI 中台",
+        "descriptionEn":  "Initially launched with basic chat functionality. Currently refining skill/MCP/KB/RAG integration. Unifies business project agents under central management for better monitoring and reduced development time, eliminating chaotic separate agent development.",
+        "thumb":  "/uploads/thumbnails/ai-platform.png",
+        "category":  "智能平台"
+    },
+    {
+        "beforeEn":  "AE requirement → AE build Cols → AE submit SO → PD review → identify options → SO/BOM generated → AE confirm. Entirely manual process",
+        "id":  "ai-bom",
+        "before":  "AE客户需求表→AE搭建Cols系统数据→AE提交SO新建流程→产品定义审核兼容性→识别新Option→SO及BOM生成→AE确认状态，全流程手动",
+        "after":  "流程自动化，校验本地化，减少AE重复提交，增加PD节点自动化操作",
+        "techStack":  [
+                          "Python",
+                          "RPA",
+                          "Windchill",
+                          "MES"
+                      ],
+        "nameEn":  "AI-Assisted BOM Construction",
+        "excerptEn":  "Auto-verification, RPA replacing PD operations, compatibility validation",
+        "status":  "published",
+        "benefits":  [
+                         {
+                             "label":  "流程自动化率",
+                             "unit":  "%",
+                             "labelEn":  "Process Automation",
+                             "value":  70
+                         }
+                     ],
+        "description":  "项目实现：自动校核Cols导出报告校核、RPA按操作步骤代替PD操作新建SO、自动校验Windchill/本地库中变更SO的兼容性逻辑、BOM校核。将AE客户需求到SO及BOM生成的整个流程自动化，减少AE重复提交流程，增加PD节点自动化操作。",
+        "recommended":  false,
+        "categoryEn":  "Smart Factory",
+        "excerpt":  "自动校核、RPA代替PD操作、兼容性校验一体化",
+        "afterEn":  "Process automated with localized validation. Reduced AE repetitive submissions. Added PD node automation",
+        "name":  "AI辅助BOM搭建",
+        "descriptionEn":  "Implemented: auto Cols report verification, RPA replacing PD to create SOs, auto Windchill/local library SO compatibility validation, BOM verification. Automates the entire AE-to-SO/BOM workflow, reducing AE repetitive submissions and adding PD node automation.",
+        "thumb":  "/uploads/thumbnails/ai-bom.png",
+        "category":  "智能工厂"
+    },
+    {
+        "beforeEn":  "Manual table processing consumed significant time, approximately 10 hours monthly",
+        "id":  "hr-cost-export",
+        "before":  "手工处理相关表，占用大量工时，每月约10个小时",
+        "after":  "全自动结合HRIS和手工表，所有维度数据和历史对比一键导出",
+        "techStack":  [
+                          "Python",
+                          "HRIS",
+                          "Excel",
+                          "ETL"
+                      ],
+        "nameEn":  "HR Cost Export Tool",
+        "excerptEn":  "Fully automated HRIS + manual table integration with one-click export",
+        "status":  "published",
+        "benefits":  [
+                         {
+                             "label":  "每月节省工时",
+                             "unit":  " 小时",
+                             "labelEn":  "Monthly Time Saved",
+                             "value":  10
+                         }
+                     ],
+        "description":  "已经交付一版，覆盖HRIS源的所有相关数据，后续等待用户输入手工数据整理结果后再合并到报表中。将人工处理相关表占用的每月10个小时工时，升级为全自动结合HRIS和手工表，所有维度数据和历史对比一键导出。",
+        "recommended":  false,
+        "categoryEn":  "Efficiency Tools",
+        "excerpt":  "全自动结合HRIS和手工表，一键导出多维数据对比",
+        "afterEn":  "Fully automated HRIS + manual table integration with one-click multi-dimension data and historical comparison export",
+        "name":  "人力成本导出程序",
+        "descriptionEn":  "First version delivered, covering all HRIS source data. Awaiting manual data consolidation before merging into reports. Upgrades monthly 10-hour manual table processing to fully automated HRIS + manual table integration with one-click multi-dimension export and historical comparison.",
+        "thumb":  "/uploads/thumbnails/hr-cost-export.png",
+        "category":  "效率工具"
+    },
+    {
+        "beforeEn":  "Issue tracing and engine parts info query available on legacy ELM but with suboptimal experience",
+        "id":  "elm-ai-rebuild",
+        "before":  "问题的追溯和发动机零部件等各项信息的查询在老的ELM平台可以查询但体验不完美",
+        "after":  "实现AI快速追溯、查询并提供可用的建议，目标追溯效率提升100%",
+        "techStack":  [
+                          "Python",
+                          "LLM",
+                          "ELM",
+                          "RAG"
+                      ],
+        "nameEn":  "ELM AI Rebuild",
+        "excerptEn":  "AI fast traceability, query, and actionable recommendations",
+        "status":  "published",
+        "benefits":  [
+                         {
+                             "label":  "追溯效率提升",
+                             "unit":  "%",
+                             "labelEn":  "Traceability Efficiency",
+                             "value":  100
+                         }
+                     ],
+        "description":  "目前正在评审Demo和功能可操作性。将老ELM平台的问题追溯和发动机零部件信息查询功能通过AI技术升级，实现AI快速追溯、查询并提供可用的建议，目标追溯效率提升100%。",
+        "recommended":  false,
+        "categoryEn":  "Smart Factory",
+        "excerpt":  "AI快速追溯、查询并提供可用的建议",
+        "afterEn":  "AI fast traceability and query with actionable recommendations. Target: 100% efficiency improvement",
+        "name":  "ELM AI重构",
+        "descriptionEn":  "Currently reviewing demo and functional feasibility. Upgrading legacy ELM platform issue tracing and engine parts query with AI technology. Enables AI fast traceability, query, and actionable recommendations. Target: 100% tracing efficiency improvement.",
+        "thumb":  "/uploads/thumbnails/elm-ai-rebuild.png",
+        "category":  "智能工厂"
+    },
+    {
+        "beforeEn":  "Manual recording of machining changes with inconvenient recording, statistics, and query",
+        "id":  "machining-change-mgmt",
+        "before":  "手工记录机加变更信息，记录不便、统计不便、查询困难",
+        "after":  "快速开发小程序解决以上问题，便捷性和效率提升数倍",
+        "techStack":  [
+                          "AI",
+                          "Low-Code",
+                          "Mini-App"
+                      ],
+        "nameEn":  "Machining Change Management",
+        "excerptEn":  "AI-developed mini-app for convenient change recording and statistics",
+        "status":  "published",
+        "benefits":  [
+                         {
+                             "label":  "效率提升数倍",
+                             "unit":  "%",
+                             "labelEn":  "Efficiency Multiplier",
+                             "value":  300
+                         }
+                     ],
+        "description":  "利用AI快速开发的小程序，目前已上线。解决手工记录机加变更信息不便、统计不便、查询困难的痛点。通过快速开发小程序实现便捷记录、统计和查询，效率提升数倍。",
+        "recommended":  false,
+        "categoryEn":  "Efficiency Tools",
+        "excerpt":  "AI快速开发的小程序，便捷记录与统计变更信息",
+        "afterEn":  "Rapid mini-app development solving all issues with several-fold convenience and efficiency improvement",
+        "name":  "机加变更管理程序",
+        "descriptionEn":  "AI-accelerated mini-app development, now live. Addresses pain points of inconvenient manual machining change recording, statistics, and query. Achieves convenient recording, statistics, and query with several-fold efficiency improvement.",
+        "thumb":  "/uploads/thumbnails/machining-change-mgmt.png",
+        "category":  "效率工具"
+    }
+]

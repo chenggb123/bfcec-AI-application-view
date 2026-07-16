@@ -1,0 +1,193 @@
+[
+    {
+        "beforeEn":  "No such functionality existed. Many terms were not understood, especially by new employees",
+        "id":  "qua-term-helper",
+        "before":  "无此功能，很多名词的意思大家不理解，尤其是对于新入职员工",
+        "after":  "对话式秒出结果，知识管理和传承",
+        "techStack":  [
+                          "Dify",
+                          "RAG",
+                          "LLM"
+                      ],
+        "nameEn":  "QUA Terminology Assistant",
+        "excerptEn":  "Instant conversational terminology lookup for knowledge management",
+        "status":  "published",
+        "benefits":  [
+                         {
+                             "label":  "知识传承效率",
+                             "unit":  "%",
+                             "labelEn":  "Knowledge Transfer",
+                             "value":  100
+                         }
+                     ],
+        "description":  "利用Dify建立知识库快速开发完成。解决新入职员工不理解专业名词含义的痛点，通过对话式交互秒出结果，实现知识管理和传承。",
+        "recommended":  false,
+        "categoryEn":  "Efficiency Tools",
+        "excerpt":  "对话式秒出名词解释，知识管理与传承",
+        "afterEn":  "Conversational instant results for knowledge management and transfer",
+        "name":  "QUA名词助手",
+        "descriptionEn":  "Rapidly developed using Dify knowledge base. Addresses the pain point of new employees not understanding professional terminology. Conversational interaction delivers instant results for knowledge management and transfer.",
+        "thumb":  "/uploads/thumbnails/qua-term-helper.png",
+        "category":  "效率工具"
+    },
+    {
+        "beforeEn":  "BIMS system had no conversational query functionality",
+        "id":  "bims-qa-helper",
+        "before":  "BIMS系统的信息无对话式查询功能",
+        "after":  "对话式查询信息，支持智能总结和建议，随时问随时答",
+        "techStack":  [
+                          "Python",
+                          "LLM",
+                          "BIMS",
+                          "RAG"
+                      ],
+        "nameEn":  "BIMS Quality Issue Query Assistant",
+        "excerptEn":  "Conversational quality info query with smart summaries and suggestions",
+        "status":  "published",
+        "benefits":  [
+                         {
+                             "label":  "查询体验升级",
+                             "unit":  "%",
+                             "labelEn":  "Query UX Upgrade",
+                             "value":  100
+                         }
+                     ],
+        "description":  "BIMS系统的信息无对话式查询功能，计划换AI工具开发。实现对话式查询信息，支持智能总结和建议，随时问随时答，体验完全升级。",
+        "recommended":  false,
+        "categoryEn":  "Smart Quality",
+        "excerpt":  "对话式查询质量信息，支持智能总结和建议",
+        "afterEn":  "Conversational info query with smart summaries and suggestions. Ask anytime, answer instantly",
+        "name":  "BIMS质量问题查询助手",
+        "descriptionEn":  "BIMS system lacked conversational query functionality. Planning to redevelop with AI tools. Enables conversational info query with smart summaries and suggestions. Ask anytime, answer instantly. Complete UX upgrade.",
+        "thumb":  "/uploads/thumbnails/bims-qa-helper.png",
+        "category":  "智能质量"
+    },
+    {
+        "beforeEn":  "Ops needed to log into N systems daily to check logs, monitoring, and info",
+        "id":  "ops-unified-monitor",
+        "before":  "运维每天需要登入N个系统来查看日志、监控、信息等",
+        "after":  "实现统一页面查看，后续Agent自动巡检给出建议报告+自动操作，效率提升，快速定位",
+        "techStack":  [
+                          "Hermes",
+                          "API",
+                          "Agent",
+                          "Monitor"
+                      ],
+        "nameEn":  "Unified Ops Monitoring Platform",
+        "excerptEn":  "Unified dashboard for multi-platform logs and monitoring with agent auto-patrol",
+        "status":  "published",
+        "benefits":  [
+                         {
+                             "label":  "效率提升",
+                             "unit":  "%",
+                             "labelEn":  "Efficiency Gain",
+                             "value":  70
+                         }
+                     ],
+        "description":  "利用Hermes调取各个平台API，实现统一页面查看多平台日志、监控和信息。后续计划进行Agent自动巡检给出建议报告并自动操作，效率大幅提升，快速定位问题。",
+        "recommended":  false,
+        "categoryEn":  "Smart Platform",
+        "excerpt":  "统一页面查看多平台日志与监控，Agent自动巡检",
+        "afterEn":  "Unified dashboard view. Future agent auto-patrol with recommendations and auto-ops for efficiency and fast localization",
+        "name":  "运维统一监控平台",
+        "descriptionEn":  "Leveraging Hermes to call various platform APIs. Achieves unified dashboard for multi-platform logs and monitoring. Future plan: Agent auto-patrol with recommendation reports and auto-operations for significant efficiency improvement and fast issue localization.",
+        "thumb":  "/uploads/thumbnails/ops-unified-monitor.png",
+        "category":  "智能平台"
+    },
+    {
+        "beforeEn":  "Ops needed to SSH into servers to manually check logs. Low efficiency. Could not auto-detect anomalies",
+        "id":  "nginx-log-analyzer",
+        "before":  "运维需要登录服务器手工查日志，效率低，无法自动发现异常",
+        "after":  "每天自动生成日志分析报告，错误率超标自动邮件通知，识别隐蔽攻击，被动救火变成主动监控",
+        "techStack":  [
+                          "Python",
+                          "Nginx",
+                          "ELK",
+                          "Alert"
+                      ],
+        "nameEn":  "Nginx Access Log Analyzer",
+        "excerptEn":  "Daily auto-generated analysis reports with anomaly email alerts",
+        "status":  "published",
+        "benefits":  [
+                         {
+                             "label":  "监控模式升级",
+                             "unit":  "%",
+                             "labelEn":  "Monitoring Upgrade",
+                             "value":  100
+                         }
+                     ],
+        "description":  "已搭建nginx日志自动采集，分析脚本可定时运行，正在优化告警阈值。实现每天自动生成日志分析报告，错误率超标自动邮件通知，运维无需手工干预。从被动救火变成主动监控，可识别隐蔽攻击。",
+        "recommended":  false,
+        "categoryEn":  "Smart Platform",
+        "excerpt":  "每日自动生成分析报告，异常自动邮件通知",
+        "afterEn":  "Daily auto analysis reports. Auto email alerts on error threshold breach. Hidden attack detection. From reactive to proactive",
+        "name":  "nginx访问日志分析",
+        "descriptionEn":  "Nginx log auto-collection built, analysis scripts run on schedule, optimizing alert thresholds. Daily auto-generated analysis reports with automatic email notifications when error rates exceed thresholds. Ops no longer needs manual intervention. Shifted from reactive firefighting to proactive monitoring with hidden attack detection.",
+        "thumb":  "/uploads/thumbnails/nginx-log-analyzer.png",
+        "category":  "智能平台"
+    },
+    {
+        "beforeEn":  "Quality inspection data scattered across stages. Root cause tracing heavily manual. Lacked dynamic monitoring and deep correlation analysis of key factors",
+        "id":  "machining-quality-ai",
+        "before":  "机加工质量检测数据分散于各加工环节，根因追溯高度依赖人工，缺乏关键关联因子的动态监测与深度关联分析",
+        "after":  "构建感知—分析—决策—优化一体化的质量智能管控闭环",
+        "techStack":  [
+                          "Python",
+                          "LLM",
+                          "MES",
+                          "IoT"
+                      ],
+        "nameEn":  "Machining Quality AI",
+        "excerptEn":  "AI auto-attribution, failure mode recognition, quality risk quantification",
+        "status":  "published",
+        "benefits":  [
+                         {
+                             "label":  "质量管控闭环",
+                             "unit":  "%",
+                             "labelEn":  "Quality Control Loop",
+                             "value":  100
+                         }
+                     ],
+        "description":  "收到来自机加质量的AI需求。当前机加工质量检测数据分散于各加工环节，质量问题根因追溯高度依赖人工。亟需引入AI实现质量问题的自动归因、失效模式智能识别、质量风险量化评估，构建\u0027感知—分析—决策—优化\u0027一体化的质量智能管控闭环。",
+        "recommended":  false,
+        "categoryEn":  "Smart Quality",
+        "excerpt":  "AI自动归因、失效模式识别、质量风险量化评估",
+        "afterEn":  "Build integrated quality intelligent control closed loop: perception → analysis → decision → optimization",
+        "name":  "机加质量AI",
+        "descriptionEn":  "Received AI requirements from machining quality team. Quality inspection data scattered across machining stages with root cause tracing heavily dependent on manual work. Urgently needs AI for auto-attribution, intelligent failure mode recognition, and quality risk quantification to build an integrated quality intelligent control closed loop.",
+        "thumb":  "/uploads/thumbnails/machining-quality-ai.png",
+        "category":  "智能质量"
+    },
+    {
+        "beforeEn":  "After ETL scheduling failures, manual re-execution and troubleshooting was required",
+        "id":  "smart-scheduler",
+        "before":  "ETL调度任务出问题后，手工去重新执行，排错",
+        "after":  "实现智能化判断，减少手工，提高效率，自动排错",
+        "techStack":  [
+                          "Python",
+                          "ETL",
+                          "Agent",
+                          "Monitor"
+                      ],
+        "nameEn":  "Smart Scheduling Platform",
+        "excerptEn":  "ETL scheduling auto-management with intelligent diagnosis and auto-recovery",
+        "status":  "published",
+        "benefits":  [
+                         {
+                             "label":  "自动化排错",
+                             "unit":  "%",
+                             "labelEn":  "Auto-Recovery",
+                             "value":  100
+                         }
+                     ],
+        "description":  "调度任务自动管理分析平台。当ETL调度任务出问题时，不再需要手工去重新执行和排错，实现智能化判断，减少手工操作，提高效率，自动排错。",
+        "recommended":  false,
+        "categoryEn":  "Smart Platform",
+        "excerpt":  "ETL调度任务自动管理，智能判断与自动排错",
+        "afterEn":  "Intelligent diagnosis, reduced manual work, improved efficiency with auto-recovery",
+        "name":  "智能调度平台",
+        "descriptionEn":  "Automated scheduling task management and analysis platform. When ETL scheduling tasks fail, no longer needs manual re-execution and troubleshooting. Achieves intelligent diagnosis, reduces manual operations, improves efficiency with auto-recovery.",
+        "thumb":  "/uploads/thumbnails/smart-scheduler.png",
+        "category":  "智能平台"
+    }
+]

@@ -1,0 +1,988 @@
+[
+  {
+    "id": "ai-mfg-change",
+    "name": "工艺配置智能核验智能体",
+    "nameEn": "Process Configuration Intelligent Verification Agent",
+    "excerpt": "AI驱动制造前期工艺变更全流程管控，自动核验+智能预警+工单闭环，精准高效防错漏",
+    "excerptEn": "AI-driven pre-production process change control — auto-verification + intelligent alerts + closed-loop work orders, precision error prevention",
+    "description": "针对当前制造前期准备环节人工依赖度高、变更识别效率低、工艺配置校验无预警、变更管控松散粗放等痛点，创新搭建 AI 工艺配置变更识别模块，依托 AI 大制造工艺变更识别场景，打造 SO BOM/MES 变更自动查询、MES 配置错漏自动预警两大核心系统功能，配套自动化工单校验闭环管理机制。通过 AI 技术替代传统人工操作，打通制造前期工艺变更全流程管控链路，实现设计变更、现场工艺变更的精准校验、智能预警、闭环管控，彻底解决传统工艺准备模式的短板，大幅提升制造前期准备工作的精准度与整体效率，规避生产质量与交付风险。",
+    "descriptionEn": "An innovative AI process configuration change identification module built to address the pain points of high manual dependency in pre-production preparation, inefficient change identification, no early warning for process configuration verification, and fragmented change control. Leveraging AI in manufacturing process change scenarios, it delivers two core capabilities — SO BOM/MES change auto-query and MES configuration error auto-alert — supported by an automated work order verification closed-loop management mechanism. AI replaces traditional manual operations, connecting the entire pre-production process change control chain to achieve precise verification, intelligent alerting, and closed-loop management of design changes and on-site process changes. This fundamentally resolves the shortcomings of traditional process preparation, significantly improving accuracy and efficiency while mitigating production quality and delivery risks.",
+    "category": "智能工厂",
+    "categoryEn": "Smart Factory",
+    "scenario": "重复性工作",
+    "scenarioEn": "Repetitive Work",
+    "status": "published",
+    "recommended": true,
+    "thumb": "/uploads/thumbnails/ai-mfg-change.png",
+    "before": "采用纯人工粗放管理模式，工艺变更需工程师跨系统手动核对检索，依靠人工排查变更点，无标准化报表支撑，工作耗时久、效率极低，且人为遗漏问题频发。工艺配置无前置校验预警机制，错漏问题只能在实际生产环节暴露，极易造成产线非计划停线、质量追溯失效等问题，风险管控滞后。整体管控以线下碎片化模式为主，流程松散、无闭环，数据无留痕、难以追溯，返工率高，严重影响生产质量与交付效率。",
+    "beforeEn": "Pure manual management — process changes required engineers to manually cross-check across systems and search for change points without standardized reports. Work was time-consuming and inefficient with frequent human omissions. Process configuration lacked pre-verification and alerting mechanisms; errors were only discovered during actual production, easily causing unplanned line stoppages and quality traceability failures with delayed risk control. Overall management was offline and fragmented with loose processes, no closed loop, no data trails, and high rework rates — severely impacting production quality and delivery efficiency.",
+    "after": "依托 AI 系统实现全流程智能化管控，自动完成工艺变更查询、报表生成、配置校验与风险预警，彻底替代人工重复核查工作。变更信息可视化呈现，实现一键查询、精准定位，告别“大海捞针”式人工检索。配置风险前置识别、提前拦截，杜绝生产环节质量与停线风险。全流程转为线上标准化闭环管控，所有操作数据留痕、可追溯，流程规范严谨，大幅降低返工概率，整体工作效率与数据准确率显著提升。",
+    "afterEn": "AI-powered intelligent full-process control — automatically performs process change queries, report generation, configuration verification, and risk alerting, completely replacing manual repetitive checks. Change information is visualized with one-click query and precise positioning, eliminating needle-in-a-haystack manual searches. Configuration risks are pre-identified and intercepted before production, eliminating quality and line stoppage risks. The entire process is transformed into online standardized closed-loop management with all operational data traceable and auditable — significantly reducing rework probability and markedly improving overall efficiency and data accuracy.",
+    "painPoints": "1. 变更识别完全依赖人工，需跨系统手动核对，检索方式低效，耗时耗力且极易出现人为遗漏\n2. 无标准化变更报表支撑，无法快速定位工艺变更点，变更信息不直观、无数据可视化支撑\n3. MES 工艺配置校验缺乏前置预警机制，配置错漏问题只能在生产环节暴露，风险严重后置\n4. 工艺变更管控流程碎片化、线下化，流程松散随意，无闭环管理，易引发追溯失效、产线非计划停线问题\n5. 工程师长期重复人工核查工作，人力成本浪费严重，无法聚焦高价值工艺优化工作",
+    "painPointsEn": "1. Change identification entirely dependent on manual cross-system checking — inefficient, time-consuming, and highly prone to human oversight\n2. No standardized change reports — unable to quickly locate process change points, change information not intuitive, no data visualization support\n3. MES process configuration verification lacks pre-warning mechanisms — configuration errors only exposed during production, risks severely delayed\n4. Process change control is fragmented and offline — loose and arbitrary workflows without closed-loop management, easily causing traceability failures and unplanned line stoppages\n5. Engineers repeatedly perform manual verification work over long periods — serious waste of labor cost, unable to focus on high-value process optimization",
+    "solution": "构建 AI 驱动的制造前期工艺变更智能管控闭环系统\n\n🛠️ 数据来源：SO BOM 数据、MES 工艺配置数据、设计变更数据、现场工艺变更数据、工单校验数据\n\n🎯 核心功能：\n  ● 变更自动查询：系统每日自动检索、统计工艺变更信息，生成标准化变更报表，实现变更信息可视化、一键快速查询\n  ● 配置智能预警：全维度自动校验 MES 工艺配置，定时识别配置错漏风险，定向推送风险预警，实现风险前置拦截\n  ● 工单闭环校验：搭建自动化工单校验机制，针对变更错漏问题强制补录、复核，规范全流程操作标准\n\n🔄 系统流程：工艺变更数据自动抓取 → 全维度智能校验 → 风险识别定向预警 → 工单强制复核校验 → 全流程线上闭环留痕",
+    "solutionEn": "Build an AI-driven pre-production process change intelligent closed-loop control system\n\n🛠️ Data Sources: SO BOM data, MES process configuration data, design change data, on-site process change data, work order verification data\n\n🎯 Core Features:\n  ● Auto Change Query: System automatically retrieves and aggregates process change information daily, generates standardized change reports, enabling change visualization and one-click quick query\n  ● Intelligent Configuration Alerting: Full-dimension auto-verification of MES process configurations, periodic identification of configuration error risks, targeted risk alert push for proactive risk interception\n  ● Work Order Closed-Loop Verification: Automated work order verification mechanism with mandatory correction and review for change errors, standardizing full-process operations\n\n🔄 System Flow: Auto process change data capture → Full-dimension intelligent verification → Risk identification & targeted alerting → Mandatory work order review & verification → Full-process online closed-loop with audit trail",
+    "benefits": [
+      {
+        "label": "人工核查工时缩减",
+        "labelEn": "Manual Verification Time Reduced",
+        "value": 90,
+        "unit": "%",
+        "unitEn": "%"
+      },
+      {
+        "label": "配置校验准确率",
+        "labelEn": "Configuration Accuracy",
+        "value": 95,
+        "unit": "%",
+        "unitEn": "%"
+      },
+      {
+        "label": "风险前置拦截率",
+        "labelEn": "Pre-Production Risk Interception",
+        "value": 100,
+        "unit": "%",
+        "unitEn": "%"
+      },
+      {
+        "label": "工程师覆盖数",
+        "labelEn": "Engineers Covered",
+        "value": 20,
+        "unit": "+",
+        "unitEn": "+"
+      }
+    ],
+    "screenshots": [
+      "/uploads/screenshots/1783658038030-a5nngn.png",
+      "/uploads/screenshots/1783658040367-j188v8.png"
+    ],
+    "videoUrl": "/uploads/videos/1784086699300-qhuq5a.mp4"
+  },
+  {
+    "id": "smart-service-ai",
+    "name": "智服务AI",
+    "nameEn": "AICRM",
+    "excerpt": "AI驱动客户支持一体化平台，服务即销售数字化底座",
+    "excerptEn": "AI-driven unified customer support platform — digital foundation for Service-as-Sales",
+    "description": "本平台是专为推动企业“服务即销售”战略落地而打造的智能化数字底座。针对当前销售与服务业务中存在的数字化缺失、信息传递低效及客户洞察不足等痛点，平台通过AI技术深度融合业务流程，将传统线下服务过程中的隐性信息与线索全面线上化、可追溯。系统不仅大幅减轻一线人员的事务性负担，更通过智能感知与数据量化，让服务价值显性化，助力团队将工作重心从“被动响应”转向“主动营销”，全面提升市场竞争力。",
+    "descriptionEn": "This platform is an intelligent digital foundation purpose-built for the enterprise 'Service-as-Sales' strategy. Addressing pain points such as digital gaps in sales and service, inefficient information flow, and insufficient customer insights, the platform deeply integrates AI with business processes. It digitizes and traces implicit information and leads from traditional offline service processes. The system not only significantly reduces frontline staff's transactional workload but also makes service value visible through intelligent sensing and data quantification, helping teams shift focus from reactive response to proactive marketing and enhancing overall market competitiveness.",
+    "category": "智能服务",
+    "categoryEn": "Smart Service",
+    "scenario": "经验驱动决策",
+    "scenarioEn": "Experience-Driven Decisions",
+    "status": "published",
+    "recommended": true,
+    "thumb": "/uploads/thumbnails/smart-service-ai.png",
+    "before": "信息记录靠手工：走访纪要依赖事后补录，耗时易错；客户信息散落在个人手中，画像缺失，数据无法沉淀。\n商机挖掘靠经验：服务中的采购意向难识别、传递慢，销售与服务割裂，“服务即销售”难以落地，线索流失严重。\n管理考核像黑盒：走访过程不透明，服务价值无法量化；一线深陷事务性工作，缺乏转向销售的动力与抓手。\n知识获取靠人传：产品配置、服务政策等知识分散，新人上手慢，对外答复标准不一，影响专业形象。\n经营决策靠复盘：销服数据孤岛，管理层无法实时掌握客户与市场动态，决策滞后，错失市场机会。",
+    "beforeEn": "Manual records: Visit notes relied on post-hoc backlogging — time-consuming and error-prone. Customer info scattered across individuals, profiles incomplete, data unable to accumulate.\nLead mining by experience: Purchase intent in service was hard to identify and slow to pass on. Sales and service were disconnected, making 'Service-as-Sales' hard to implement with severe lead loss.\nBlack-box management: Visit processes were opaque, service value couldn't be quantified. Frontline staff buried in transactional work, lacking motivation and leverage to shift toward sales.\nKnowledge transfer by word-of-mouth: Product configs and service policies were scattered; slow onboarding for new staff, inconsistent external communication, hurting professional image.\nDecisions by hindsight: Sales-service data silos prevented management from real-time customer and market insights. Delayed decisions missed market opportunities.",
+    "after": "走访记录自动化：AI语音转写并提取关键信息，一键生成标准化记录，自动补充客户画像，大幅减轻一线事务负担。\n商机线索实时推：AI精准识别服务中的采购意向，自动同步至销售端，打破部门壁垒，实现商机零遗漏、即时转化。\n管理看板全可视：实时查看走访、任务及线索转化，服务过程可追溯、价值可量化，激励一线重心转向促销售。\n智能问答随时用：智能体提供销售话术、服务信息及动力链匹配推荐，一键获取专业答案，降低经验门槛，保障服务品质统一。\n数据驱动快决策：全链路信息线上化，形成统一的客户与市场洞察，实时感知动态，以智能化驱动业务敏捷增长。",
+    "afterEn": "Automated visit records: AI speech-to-text extracts key info, generates standardized records in one click, auto-enriches customer profiles, significantly reducing frontline transactional load.\nReal-time lead push: AI precisely identifies purchase intent in service interactions, auto-syncs to sales teams, breaks down departmental silos — zero missed opportunities with instant conversion.\nFull-visibility management dashboards: Real-time view of visits, tasks, and lead conversion. Service processes are traceable and value is quantifiable, motivating frontline to focus on driving sales.\nOn-demand intelligent Q&A: Built-in agents provide sales scripts, service info, and powertrain matching recommendations. One-click professional answers lower experience barriers and ensure consistent service quality.\nData-driven rapid decisions: Full-chain information digitization forms unified customer and market insights. Real-time perception of dynamics enables intelligent, agile business growth.",
+    "painPoints": "1. 服务及销售过程中产生的客户信息、技术经验、销售线索仍依赖微信、电话、纸质记录等线下方式传递，缺乏统一系统管理。\n2. 走访任务难以追踪，走访中产生的销售线索无追溯，服务对销售的价值难以量化。\n3. 人员变动时，关键信息与服务经验易流失，商机损失大。\n4. 传统IT平台需工程师维护大量信息，增加一线员工负担，且不能提供决策指导。",
+    "painPointsEn": "1. Customer information, technical experience, and sales leads generated during service and sales still rely on offline channels like WeChat, phone calls, and paper records, lacking unified system management.\n2. Visit tasks are hard to track; sales leads generated during visits have no traceability, making it difficult to quantify service's value to sales.\n3. When staff changes occur, critical information and service experience are easily lost, resulting in significant business opportunity loss.\n4. Traditional IT platforms require engineers to maintain large amounts of information, increasing frontline burden without providing decision guidance.",
+    "solution": "通过建立“AI驱动的客户支持一体化平台”，将服务过程中的信息与线索线上化、可追溯，让服务价值可量化，一线事务性负担减轻，从而将工作重心转向促销售，真正支撑“服务即销售”落地。\n\n● 走访记录自动化，重塑客户画像：利用AI语音转文字与自然语言处理技术，自动提取对话中的关键客户信息。经人工确认后，一键生成标准化走访记录并实时补充客户画像，彻底告别繁琐的手工录入，确保客户资产沉淀完整、准确。\n\n● 商机线索实时捕获，无缝衔接销售：AI引擎实时分析服务交互内容，精准识别潜在采购意向与需求信号，并将高价值线索自动同步至销售端。打破部门壁垒，确保每一次服务接触点都转化为销售机会，实现商机零遗漏。\n\n● 管理看板全景可视，服务价值量化：为管理层提供实时、多维度的数字化看板，涵盖走访轨迹、任务执行及线索转化等关键指标。让服务过程透明可追溯，使服务团队的绩效贡献清晰可量化，为管理决策提供坚实的数据支撑。\n\n● 智能问答与知识赋能，提升专业效能：内置垂直领域智能体，支持服务信息、销售话术及专业知识的一键查询与精准问答。无论是售后技术支持还是售前配置咨询，均能即时获取标准答案，降低对人员经验的依赖，保障服务品质的一致性。\n\n● AI动力链匹配，驱动精准推荐：基于客户需求与工况数据，通过AI算法实现智能动力链配置匹配。为销售人员提供科学、个性化的产品推荐方案，以技术手段辅助顾问式销售，提高成单率与客户满意度。",
+    "solutionEn": "Build an 'AI-driven Unified Customer Support Platform' that digitizes and traces service process information and leads, quantifies service value, and reduces frontline transactional burden — shifting focus to sales and truly enabling 'Service-as-Sales'.\n\n● Automated Visit Records & Customer Profile Enrichment: Leveraging AI speech-to-text and NLP to automatically extract key customer information from conversations. After manual confirmation, one-click generation of standardized visit records with real-time profile enrichment — eliminating tedious manual entry and ensuring complete, accurate customer asset accumulation.\n\n● Real-time Lead Capture & Seamless Sales Handoff: AI engine analyzes service interactions in real-time, precisely identifying potential purchase intent and demand signals, and auto-syncing high-value leads to the sales end. Breaking down departmental silos, ensuring every service touchpoint converts to a sales opportunity with zero missed leads.\n\n● Panoramic Management Dashboards & Quantified Service Value: Providing management with real-time, multi-dimensional digital dashboards covering key metrics such as visit trajectories, task execution, and lead conversion. Making service processes transparent and traceable, clearly quantifying service team performance for solid data-driven management decisions.\n\n● Intelligent Q&A & Knowledge Empowerment: Built-in vertical domain agents supporting one-click queries and precise answers for service information, sales scripts, and professional knowledge. Whether post-sales technical support or pre-sales configuration consultation, instant standard answers reduce dependency on individual experience and ensure consistent service quality.\n\n● AI Powertrain Matching & Precision Recommendations: Based on customer needs and operating condition data, AI algorithms enable intelligent powertrain configuration matching. Providing sales staff with scientific, personalized product recommendation solutions — technology-assisted consultative selling that improves win rates and customer satisfaction.",
+    "benefits": [
+      {
+        "label": "线索闭环追踪率",
+        "labelEn": "Lead Closed-Loop Tracking",
+        "value": 100,
+        "unit": "%",
+        "unitEn": "%"
+      },
+      {
+        "label": "服务线索转化率提升",
+        "labelEn": "Service Lead Conversion Improvement",
+        "value": 5,
+        "unit": "%",
+        "unitEn": "%"
+      },
+      {
+        "label": "客户终身价值提升",
+        "labelEn": "Customer Lifetime Value Increase",
+        "value": 15,
+        "unit": "%",
+        "unitEn": "%"
+      },
+      {
+        "label": "查询效率",
+        "labelEn": "Query Response Time",
+        "value": 5,
+        "unit": "秒内",
+        "unitEn": "秒内"
+      }
+    ],
+    "screenshots": [
+      "/uploads/screenshots/1783404062879-kmxic8.jpg",
+      "/uploads/screenshots/1783404065802-put9xi.jpg",
+      "/uploads/screenshots/1783404068968-dqvits.jpg",
+      "/uploads/screenshots/1783404072871-adt6c1.jpg"
+    ],
+    "videoUrl": "/uploads/videos/1784026528123-z2hbxd.mp4"
+  },
+  {
+    "id": "quality-early-ai",
+    "name": "早期批量质量问题的智能识别与分析智能体",
+    "nameEn": "Intelligent Early Batch Quality Issue Identification & Analysis Agent",
+    "excerpt": "混合算法动态识别批量质量问题，大模型驱动智能分析与预警",
+    "excerptEn": "Hybrid algorithm dynamically identifies batch quality issues, LLM-driven intelligent analysis and alerting",
+    "description": "针对当前早期批量质量问题识别滞后、人工依赖度高以及专家资源紧缺等痛点，创新构建AI质量问题分析智能体。该智能体采用混合算法模型，能够动态抓取索赔数据变化，实时识别潜在的批量质量问题；并通过多维度评分体系精准锁定高风险事件并触发预警，显著提升了问题识别的及时性，有效遏制了批量问题对市场造成的负面影响。同时，系统基于大语言模型深度打通了生产、销售、索赔及车联网等多个企业数据源，将资深工程师的分析经验转化为智能体的核心技能，实现了对质量问题的专业化诊断与智能分析，大幅缩短了数据查找与分析周期，显著降低了质量问题分析的门槛与难度。",
+    "descriptionEn": "An innovative AI quality issue analysis agent built to address the pain points of delayed early batch quality issue identification, high manual dependency, and scarce expert resources. The agent uses a hybrid algorithm model to dynamically capture claim data changes and identify potential batch quality issues in real-time. Through a multi-dimensional scoring system, it precisely locks onto high-risk events and triggers alerts, significantly improving identification timeliness and effectively curbing the negative impact of batch issues on the market. The system deeply integrates multiple enterprise data sources including production, sales, claims, and telematics via large language models, transforming senior engineer analysis experience into core agent skills. This enables professional diagnosis and intelligent analysis of quality issues, dramatically shortening data search and analysis cycles while significantly lowering the barrier and difficulty of quality issue analysis.",
+    "category": "智能质量",
+    "categoryEn": "Smart Quality",
+    "scenario": "专家依赖",
+    "scenarioEn": "Expert Dependence",
+    "status": "published",
+    "recommended": true,
+    "thumb": "/uploads/thumbnails/quality-early-ai.png",
+    "before": "每两周人工分析市场索赔数据，时间周期长、分析效率低且准确率低。由于分析周期长效率低导致问题扩散，成本升高。质量问题的分析依赖专家、数据分散、分析效率低。",
+    "beforeEn": "Bi-weekly manual analysis of market claim data with long cycles, low efficiency, and low accuracy. Problems spread due to long analysis cycles, increasing costs. Quality analysis depended on scattered expert knowledge with low efficiency.",
+    "after": "每天实时分析数据变化，通过AI模型动态识别风险，效率大幅提升。质量问题早发现避免扩散，降低成本。AI赋能的质量问题分析，更加智能高效，分析效率从原来的3天提高到3分钟。",
+    "afterEn": "Daily real-time data analysis with AI model dynamic risk identification for significant efficiency gains. Early detection prevents problem spread and reduces costs. AI-powered quality analysis is more intelligent and efficient — analysis time improved from 3 days to 3 minutes.",
+    "painPoints": "1. 早期批量质量问题识别滞后，人工依赖度高，导致影响扩大、索赔费用增加\n2. 批量质量问题识别不及时，导致索赔成本激增\n3. 质量问题分析依赖大量数据，分析难度大、耗时费力\n4. 质量分析依赖专家经验，知识传承困难，一致性差",
+    "painPointsEn": "1. Delayed early batch quality issue identification with high manual dependency, leading to expanded impact and increased claim costs\n2. Untimely batch quality issue identification causing surging claim costs\n3. Quality analysis depends on massive data, making analysis difficult and time-consuming\n4. Quality analysis relies on expert experience, making knowledge transfer difficult with poor consistency",
+    "solution": "构建AI驱动的质量问题识别与风险分析系统\n🛠️ 数据来源：初审索赔数据、销售数据、建造数据等\n🎯 核心功能：\n  ● 智能识别：动态差异识别、多维分析算法\n  ● 风险评估：严重程度分级、影响范围预测、损失估算\n  ● 智能分析：自动生成问题分析报告\n🧠 大模型应用：\n  ● 专家知识注入：质量问题分析专家提供分析思路、逻辑框架与案例\n  ● 模型训练：大模型学习专家分析方法，构建质量问题分析知识库\n  ● 推理应用：基于学习成果对新数据进行智能分析与推理\n🔄 系统流程：索赔数据抓取 → 风险评估 → 智能预警 → 问题分析 → 决策支持",
+    "solutionEn": "Build AI-driven quality issue identification and risk analysis system\n🛠️ Data Sources: Initial claim data, sales data, manufacturing data, etc.\n🎯 Core Features:\n  ● Intelligent Identification: Dynamic variance detection, multi-dimensional analysis algorithms\n  ● Risk Assessment: Severity grading, impact scope prediction, loss estimation\n  ● Intelligent Analysis: Auto-generated issue analysis reports\n🧠 LLM Application:\n  ● Expert Knowledge Injection: Quality analysis experts provide analytical approaches, logical frameworks, and cases\n  ● Model Training: LLM learns expert analysis methods, building a quality issue analysis knowledge base\n  ● Inference Application: Intelligent analysis and reasoning on new data based on learned outcomes\n🔄 System Flow: Claim data capture → Risk assessment → Intelligent alert → Issue analysis → Decision support",
+    "benefits": [
+      {
+        "label": "分析效率",
+        "labelEn": "Analysis Efficiency",
+        "value": 3,
+        "unit": "Day→3Min",
+        "unitEn": "Day→3Min"
+      },
+      {
+        "label": "识别率提升至",
+        "labelEn": "Identification Rate",
+        "value": 95,
+        "unit": "%",
+        "unitEn": "%"
+      },
+      {
+        "label": "提前发现",
+        "labelEn": "Early Detection",
+        "value": 15,
+        "unit": "Day",
+        "unitEn": "Day"
+      },
+      {
+        "label": "专家经验覆盖率",
+        "labelEn": "Expert Knowledge Coverage",
+        "value": 98,
+        "unit": "%",
+        "unitEn": "%"
+      },
+      {
+        "label": "客户满意度提升",
+        "labelEn": "Customer Satisfaction",
+        "value": 20,
+        "unit": "%",
+        "unitEn": "%"
+      }
+    ],
+    "screenshots": [
+      "/uploads/screenshots/1783385272087-4c9paj.jpg",
+      "/uploads/screenshots/1783399461288-5124p7.png",
+      "/uploads/screenshots/1783399463633-6gk937.png",
+      "/uploads/screenshots/1783399465910-8eoohw.png"
+    ],
+    "videoUrl": "/uploads/videos/1783385615332-4utt1k.mp4"
+  },
+  {
+    "id": "supplier-audit-ai",
+    "name": "供应商经营风险智能监控系统",
+    "nameEn": "Supplier Operational Risk Intelligent Monitoring System",
+    "excerpt": "多源数据采集+自动巡检预警，48类资质覆盖+5类经营风险，2分钟完成全维度供应商风险核查",
+    "excerptEn": "Multi-source data + automated patrol alerting — 48 license types + 5 risk categories, full-dimension supplier risk check in 2 minutes",
+    "description": "针对当前供应商经营风险监控依赖人工定期排查、信息获取渠道分散、资质状态变化发现不及时等痛点，构建了一套供应商经营风险智能监控系统。系统通过多个政府公开数据源的自动化爬虫引擎，实时采集供应商的资质许可、司法执行、行政处罚等关键经营信息；结合企查查 MCP 商业数据，形成多维度风险画像。系统支持定时自动巡检与手动核查双模式，对资质临期、被执行新增、经营异常等风险事件实时预警，将原来数小时的人工排查缩短至分钟级的自动出结果，显著降低了日常采购业务中的供应商风险敞口。",
+    "descriptionEn": "A Supplier Operational Risk Intelligent Monitoring System built to address pain points of manual periodic inspections, scattered information channels, and delayed detection of qualification status changes. The system uses automated crawler engines across multiple government public data sources to collect supplier license, judicial execution, and administrative penalty information in real-time. Combined with Qichacha MCP commercial data, it forms multi-dimensional risk profiles. The system supports both scheduled automatic patrol and manual check modes, with real-time alerts for upcoming license expirations, new enforcement actions, and operational anomalies — reducing hours of manual inspection to minutes of automated results, significantly lowering supplier risk exposure in daily procurement operations.",
+    "category": "智能平台",
+    "categoryEn": "智能平台",
+    "scenario": "重复性工作",
+    "scenarioEn": "Repetitive Work",
+    "status": "published",
+    "recommended": true,
+    "thumb": "/uploads/thumbnails/supplier-audit-ai.png",
+    "before": "采购员需手动访问 6 个以上政府网站逐个查询，每个供应商耗时 30 分钟以上。资质到期、被执行等关键风险依赖人工记忆和定期报表，平均发现延迟 15-30 天。数据分散在各个网站的截图和 Excel 表格中，无法统一追溯和分析。",
+    "beforeEn": "Buyers manually visited 6+ government websites per supplier, taking 30+ minutes each. Key risks like license expiry and new enforcement actions relied on human memory and periodic reports, with average detection delay of 15-30 days. Data scattered across screenshots and Excel files with no unified traceability or analysis.",
+    "after": "一键自动核查，单个供应商全维度检查 2 分钟内完成。定时自动巡检，风险事件发现延迟从数周缩短到 24 小时内。所有数据统一存储、可追溯、可对比，风险画像一目了然。",
+    "afterEn": "One-click automated verification — full-dimension check completed within 2 minutes per supplier. Scheduled automatic patrol reduces risk detection delay from weeks to under 24 hours. All data unified, traceable, and comparable with clear risk profiles at a glance.",
+    "painPoints": "1. 供应商风险排查依赖人工，采购员需逐个登录政府网站查询资质状态、法院被执行人、行政处罚等信息，耗时费力且容易遗漏\n2. 政府数据源分散（能源局、住建部、工信部、文旅部、法院执行网），各网站查询方式不同，部分还需验证码识别，人工操作效率极低\n3. 资质到期、被执行新增等关键风险事件发现滞后，往往等到合同续签或发生纠纷时才暴露，此时已造成实际损失\n4. 外部商业数据（企查查等）覆盖企业经营全貌，但与政府资质数据割裂，缺乏统一的风险聚合与评分机制\n5. 供应商数量增长后，人工巡检不可持续，缺乏自动化预警和风险变化追踪能力",
+    "painPointsEn": "1. Supplier risk inspection depends on manual work — buyers log into government websites one by one to check license status, court enforcement, and administrative penalties, which is time-consuming and prone to omissions\n2. Government data sources are scattered (Energy Bureau, Housing & Construction, MIIT, Culture & Tourism, Court Enforcement), each with different query methods, some requiring CAPTCHA — extremely low manual efficiency\n3. Critical risk events like license expiry and new enforcement actions are discovered too late, often only surfacing during contract renewal or disputes when actual losses have already occurred\n4. External commercial data (Qichacha etc.) covers full business profiles but is disconnected from government license data, lacking a unified risk aggregation and scoring mechanism\n5. As supplier counts grow, manual patrol is unsustainable, lacking automated alerting and risk change tracking capabilities",
+    "solution": "构建多源数据采集 + 统一风险评分 + 自动巡检预警的供应商监控体系\n\n🛠️ 数据来源：\n  ● 政府公开查询平台：国家能源局、住建部（含省级）、工信部、文旅部、交通运输部、市场监管总局、财政部、国家认监委、国家邮政局、商务部、全国法院被执行人查询等\n  ● 商业数据：企查查 MCP（企业工商、司法、经营、知识产权等）\n  ● 供应商主数据：统一社会信用代码、企业名称、合作状态等\n\n🎯 核心功能：\n  ● 自动资质核查：覆盖 48 类供应商资质许可，一键触发爬虫自动获取许可证状态、有效期、许可范围，按统一社会信用代码智能匹配省份数据源\n  ● 经营风险评估：整合企查查数据，覆盖被执行/失信/行政处罚/经营异常/ICP 备案五类检查，生成风险清单\n  ● 多源数据聚合：每个供应商生成统一风险画像，关联资质记录 + 司法记录 + 行政处罚记录，可追溯原始数据\n  ● 定时自动巡检：全量供应商按周期自动巡检，高风险供应商加密频次，无需人工干预\n  ● 风险预警：资质临期提醒、被执行新增告警、经营状态变更通知，按风险等级分级推送\n\n⚙️ 技术架构：\n  ● 统一爬虫引擎：48 类资质配置，6 种执行策略，jfbym + GLM-4V 双引擎验证码识别，省份智能路由\n  ● 企查查 MCP 集成 + FastAPI + Vue 3 全栈架构\n\n🔄 系统流程：供应商入库 → 首次全面核查 → 生成风险画像 → 定时巡检更新 → 风险变化预警 → 采购决策支持",
+    "solutionEn": "Build a supplier monitoring system with multi-source data collection + unified risk scoring + automated patrol alerting\n\n🛠️ Data Sources:\n  ● Government public query platforms: National Energy Administration, Housing & Construction (provincial), MIIT, Culture & Tourism, Transport, Market Regulation, Finance, Certification & Accreditation, Postal Service, Commerce, National Court Enforcement Database, etc.\n  ● Commercial data: Qichacha MCP (business registration, judicial, operational, IP, etc.)\n  ● Supplier master data: Unified Social Credit Code, enterprise name, cooperation status\n\n🎯 Core Features:\n  ● Auto License Verification: Covers 48 supplier license types, one-click crawler auto-retrieves license status, validity, and scope, intelligently matches provincial data sources by Unified Social Credit Code\n  ● Operational Risk Assessment: Integrates Qichacha data covering enforcement, dishonesty, administrative penalties, operational anomalies, and ICP filing — 5 risk categories with risk lists\n  ● Multi-Source Data Aggregation: Unified risk profile per supplier linking license records + judicial records + penalty records, all traceable to original data\n  ● Scheduled Auto Patrol: Full supplier base on periodic auto patrol, higher frequency for high-risk suppliers, zero manual intervention\n  ● Risk Alerting: License expiry reminders, new enforcement alerts, operational status change notifications, tiered by risk level\n\n⚙️ Technical Architecture:\n  ● Unified crawler engine: 48 license type configs, 6 execution strategies, jfbym + GLM-4V dual-engine CAPTCHA recognition, smart provincial routing\n  ● Qichacha MCP integration + FastAPI + Vue 3 full-stack architecture\n\n🔄 System Flow: Supplier onboarding → Initial full audit → Risk profile generation → Scheduled patrol updates → Risk change alerts → Procurement decision support",
+    "benefits": [
+      {
+        "label": "单供应商核查时间",
+        "labelEn": "Per-Supplier Check Time",
+        "value": 30,
+        "unit": "min→2min",
+        "unitEn": "min→2min"
+      },
+      {
+        "label": "风险发现延迟",
+        "labelEn": "Risk Detection Delay",
+        "value": 15,
+        "unit": "天→24h内",
+        "unitEn": "天→24h内"
+      },
+      {
+        "label": "资质覆盖类型",
+        "labelEn": "License Types Covered",
+        "value": 48,
+        "unit": "类",
+        "unitEn": "类"
+      },
+      {
+        "label": "爬虫自动识别率",
+        "labelEn": "Crawler Auto-Recognition Rate",
+        "value": 90,
+        "unit": "%+",
+        "unitEn": "%+"
+      },
+      {
+        "label": "人工排查替代率",
+        "labelEn": "Manual Inspection Replacement",
+        "value": 85,
+        "unit": "%+",
+        "unitEn": "%+"
+      }
+    ],
+    "screenshots": [
+      "/uploads/screenshots/1783651386481-vl86vz.png",
+      "/uploads/screenshots/1783651388790-4i5bnc.png",
+      "/uploads/screenshots/1783651390981-yi3g1r.png"
+    ],
+    "videoUrl": "/uploads/videos/1783651394334-3zaizw.mp4"
+  },
+  {
+    "beforeEn": "On-site repair heavily dependent on individual engineer experience. Manual lookup and parts search were fragmented. Long downtime dragging OEE",
+    "id": "repair-master",
+    "before": "现场维修高度依赖工程师个人经验，查阅手册、检索备件流程繁琐割裂，设备停机时间长，拖累产线OEE",
+    "after": "深度融合大模型与智能体架构，维修知识自学习、多模态故障识别、图形化报告生成，维修效率提升50%，整体维修能力提升20%",
+    "nameEn": "Repair Master AI",
+    "excerptEn": "Integrated repair Q&A, spare parts lookup, and multimodal fault diagnosis",
+    "status": "published",
+    "benefits": [
+      {
+        "label": "维修效率提升",
+        "unit": "%",
+        "labelEn": "Repair Efficiency",
+        "value": 50,
+        "unitEn": "%"
+      },
+      {
+        "label": "整体维修能力提升",
+        "unit": "%",
+        "labelEn": "Overall Capability",
+        "value": 20,
+        "unitEn": "%"
+      },
+      {
+        "label": "设备OEE提升",
+        "unit": "%",
+        "labelEn": "OEE Improvement",
+        "value": 15,
+        "unitEn": "%"
+      }
+    ],
+    "description": "当前已开发至2.0版本，集成了维修知识问答、备件库存查询、采购流程查询、线稿图生成等功能。深度融合DeepSeek v4大模型与Herness智能体架构，构建具备长短期记忆、自主思考决策及自进化能力的认知中枢，支持多模态故障识别及图形化报告生成。维修效率提升50%，整体维修能力提升20%。",
+    "recommended": true,
+    "categoryEn": "Smart Factory",
+    "excerpt": "维修知识问答、备件查询、多模态故障识别一体化平台",
+    "afterEn": "Deep LLM and agent integration. Self-learning repair knowledge, multimodal fault recognition, graphical reports. Repair efficiency +50%, overall capability +20%",
+    "name": "维修大师",
+    "descriptionEn": "Version 2.0 with integrated repair Q&A, spare parts inventory lookup, procurement query, and sketch generation. Deep integration with DeepSeek v4 and Herness agent architecture. Built cognitive hub with LSTM, autonomous decision-making, and self-evolution. Supports multimodal fault diagnosis and graphical report generation. Repair efficiency +50%, overall capability +20%.",
+    "thumb": "/uploads/thumbnails/repair-master.png",
+    "category": "智能工厂",
+    "scenario": "经验驱动决策",
+    "scenarioEn": "Experience-Driven Decisions",
+    "painPoints": "",
+    "painPointsEn": "",
+    "solution": "",
+    "solutionEn": "",
+    "screenshots": [
+      "/uploads/screenshots/1783580483419-gmw89n.png",
+      "/uploads/screenshots/1783580486652-ywceoi.png",
+      "/uploads/screenshots/1783580489195-vgnhhs.png"
+    ],
+    "videoUrl": "/uploads/videos/1783580567965-fj5gdv.mp4"
+  },
+  {
+    "id": "elm-ai-analysis",
+    "name": "IPV智能分析平台",
+    "nameEn": "IPV Intelligent Analysis Platform",
+    "excerpt": "发动机装配质量过程能力分析与异常管控，实现全维度CPK/PPK自动分析、实时预警与精准溯源",
+    "excerptEn": "Engine assembly quality process capability analysis & anomaly control — full-dimension CPK/PPK auto-analysis, real-time alerts & precise traceability",
+    "description": "针对当前发动机装配过程中数据处理依赖人工、工序能力分析滞后、质量异常无法实时预警、报表制作成本高、工位管控覆盖不全等痛点，我们构建了IPV智能分析平台。该平台基于工位MES实时装配记录、零部件信息、生产订单及设备传感器采集数据，实现了自动化数据清洗校验、全维度过程能力自动分析、精准缺陷溯源定位、异常实时预警推送、多维度可视化报表看板等核心能力，显著提升了装配质量管理的智能化水平。同时，平台支持历史数据追溯查询，能够按时间回溯全年装配质量数据，并根据不同量级及岗位自动推送标准化质量分析报告。",
+    "descriptionEn": "To address pain points in engine assembly — manual data processing, lagging process capability analysis, lack of real-time quality anomaly alerts, high report generation costs, and incomplete station coverage — we built the IPV Intelligent Analysis Platform. Leveraging real-time MES station assembly records, part information, production orders, and equipment sensor data, the platform delivers automated data cleaning & validation, full-dimension process capability auto-analysis (CPK/PPK), precise defect tracing & root cause localization, real-time anomaly alert push, and multi-dimensional visualization dashboards. It also supports historical data traceability across the full year and auto-pushes standardized quality analysis reports based on volume and role.",
+    "category": "智能工厂",
+    "categoryEn": "Smart Factory",
+    "scenario": "经验驱动决策",
+    "scenarioEn": "Experience-Driven Decisions",
+    "status": "published",
+    "recommended": true,
+    "thumb": "/uploads/thumbnails/elm-ai-analysis.png",
+    "before": "数据全手工处理，每日需专人导出多系统原始数据，通过Excel手工清洗、核对、修正缺失值，单次均耗时3小时以上。零件、订单数据不一致时，需跨班组电话逐一核对，单次数据确认至少耗时半天，数据错漏、滞后问题频发。MES无自动CPK计算能力，仅能每月人工汇总1次工位工序能力，问题发现滞后30天。无实时过程预警机制，装配过程异常仅能月底人工分析发现。IPV工位无全量发动机装配数据前置校验机制，工艺、参数异常产品易完成全工序流转，甚至直接出库流向市场。日报/周报/月度质量报告全部依赖人工汇总制表，单次完整报表制作需4小时。",
+    "beforeEn": "Data processing was entirely manual — dedicated staff exported raw data from multiple systems daily, manually cleaned, verified, and corrected missing values in Excel, consuming 3+ hours per session. Inconsistent part and order data required cross-team phone verification, with a single confirmation taking at least half a day — errors and delays were frequent. MES lacked automatic CPK calculation capability; station process capability was only manually summarized once a month, with issues discovered 30 days late. No real-time process alert mechanism existed — assembly anomalies were only found during month-end manual analysis. IPV stations had no pre-release full-volume engine data verification, allowing products with process or parameter anomalies to complete the entire workflow and even ship to customers. Daily/weekly/monthly quality reports were entirely manually compiled, with a single complete report taking 4 hours.",
+    "after": "数据全自动处理，系统实时采集、自动清洗校验全流程无需人工干预，彻底消除手工数据处理工时。系统自动完成多源数据匹配校验，无需电话线下核对数据，从源头保障数据一致性与准确性。各工位、SO订单、零部件的过程能力指数及时更新，前一日装配质量当日可查，分析时效性提升95%。装配过程中工艺参数偏离标准即刻触发告警，实现在线拦截潜在不良，避免不合格品流转。实现发动机出库前全量IPV装配数据自动校验，有效识别异常数据并及时拦截，从源头杜绝问题整机出库，规避下游质量风险。各类质量分析报表自动生成，无需人工汇总整理，按时自动推送，彻底释放报表编制工时。",
+    "afterEn": "Fully automated data processing — real-time collection, automatic cleaning and validation with zero manual intervention, completely eliminating manual data processing hours. The system automatically performs multi-source data matching and verification, eliminating phone-based cross-checking and ensuring data consistency and accuracy at the source. Process capability indices for each station, SO order, and part are updated in real time — the previous day's assembly quality is available same-day, improving analysis timeliness by 95%. Process parameter deviations during assembly trigger immediate alerts, enabling online interception of potential defects and preventing non-conforming product flow. Full-volume IPV assembly data is automatically verified before engine release, effectively identifying and intercepting anomalies at the source to prevent defective engines from leaving the plant. All quality analysis reports are auto-generated and pushed on schedule without manual compilation, fully freeing up report preparation hours.",
+    "painPoints": "1. 数据处理全依赖人工，效率低下：工艺人员跨多系统导出原始数据，依靠Excel手工筛选、整理、补全缺失字段，日均占用3小时专职工时。\n2. 数据核验流程繁琐，信息准确性难保障：多系统数据字段不统一、批次不匹配、记录缺失，数据确认耗时半天，错漏频发。\n3. 装配过程能力分析严重滞后，无法实时监控：原有MES无自动CPK/PPK计算能力，只能每月人工汇总，生产异常滞后30天才可发现。\n4. 无法分层精准定位质量短板：不能单独拆分SO、关键零部件不同供应商，整体数据混在一起，改善方向模糊。\n5. 无前置过程预警，问题只能事后补救：全流程无实时参数监控告警机制，所有质量异常只能在成品售后客户终端暴露。\n6. 缺少出库前置校验拦截机制，不良发动机易流入下游：无法对全量装配数据做统一校验，隐藏工艺异常产品会完成全部工序流转。\n7. 质量报表制作成本高：日报、周报、月度工序能力分析报表全部手动汇总、制图，单次完整报表制作需4小时。\n8. 工位质量管控覆盖不全：仅能每月对异常表现工位做能力分析，剩余IPV工位长期处于无数据监控状态。",
+    "painPointsEn": "1. Fully manual data processing, low efficiency: Engineers export raw data across multiple systems and rely on Excel for manual filtering, organizing, and filling missing fields — 3 hours of dedicated staff time daily.\n2. Cumbersome data verification, unreliable accuracy: Inconsistent data fields across systems, batch mismatches, missing records — data confirmation takes half a day with frequent errors and omissions.\n3. Severely lagging process capability analysis, no real-time monitoring: Legacy MES has no automatic CPK/PPK calculation — only monthly manual summaries, with production anomalies discovered 30 days late.\n4. Unable to pinpoint quality weaknesses at granular levels: Cannot isolate by SO or key part suppliers — all data mixed together, improvement direction unclear.\n5. No proactive process alerts, issues only addressed reactively: No real-time parameter monitoring and alerting across the entire process — all quality anomalies only surface at the customer end after shipment.\n6. No pre-release verification gate, defective engines flow downstream: Cannot perform unified verification on full-volume assembly data — products with hidden process anomalies complete the entire workflow.\n7. High quality report production cost: Daily, weekly, and monthly process capability reports are all manually compiled and charted — a single complete report takes 4 hours.\n8. Incomplete station quality coverage: Only stations with abnormal performance get monthly capability analysis — remaining IPV stations have long been in a data-monitoring vacuum.",
+    "solution": "重新构建装配质量数据分析与管控体验\n\n🛠️ 数据来源：工位MES实时发动机装配记录、零部件SN序列号与物料批次、供应商来料信息、SO生产订单与工艺标准BOM、标准作业SOP参数、设备传感器采集的扭矩、压装力、位移等装配工艺实测值\n\n🎯 核心功能：\n● 自动化数据清洗校验：替代人工Excel整理，自动校验数据完整性、自动标记数据异常项\n● 全维度过程能力自动分析：一键输出各工位、项目、机型、SO订单、零部件CPK/PPK，实时展示工序稳定性\n● 精准缺陷溯源定位：输入不良机型、SO、零件名称，快速锁定对应产线、工位、批次、供应商\n● 异常实时预警推送：工艺参数超管控限、工序能力不足即时消息推送提醒\n● 多维度可视化报表看板：产线总览、单品零件能力报表、SO订单质量分析、机型不良TOP排行\n● 历史数据追溯查询：支持按时间回溯全年装配质量数据\n● 报告一键推送：定期AI分析总结，根据不同量级及岗位自动推送标准化质量分析报告\n\n🔄 系统流程：数据采集（MES/传感器/订单系统）→ 自动清洗校验 → CPK/PPK自动计算 → 实时监控预警 → 缺陷溯源定位 → 报表生成与推送",
+    "solutionEn": "Rebuilding the assembly quality data analysis and control experience\n\n🛠️ Data Sources: Real-time MES station assembly records, part SN serial numbers & material batches, supplier incoming material info, SO production orders & process standard BOM, standard operating SOP parameters, equipment sensor data (torque, pressing force, displacement, etc.)\n\n🎯 Core Capabilities:\n● Automated data cleaning & validation: Replaces manual Excel processing — auto-validates data completeness and flags anomalies\n● Full-dimension process capability auto-analysis: One-click CPK/PPK output by station, project, model, SO order, and part — real-time process stability display\n● Precise defect tracing & root cause localization: Input defective model, SO, or part name to quickly pinpoint production line, station, batch, and supplier\n● Real-time anomaly alert push: Instant messaging alerts when process parameters exceed control limits or process capability falls below threshold\n● Multi-dimensional visualization dashboards: Production line overview, single-part capability reports, SO order quality analysis, model defect TOP ranking\n● Historical data traceability: Full-year assembly quality data lookback by time range\n● One-click report push: Periodic AI-powered analysis summaries auto-pushed as standardized quality reports based on volume and role\n\n🔄 System Flow: Data Collection (MES/Sensors/Order Systems) → Auto Cleaning & Validation → CPK/PPK Auto-Calculation → Real-Time Monitoring & Alerting → Defect Tracing & Localization → Report Generation & Push",
+    "benefits": [
+      {
+        "label": "人力成本年节约",
+        "labelEn": "Annual Labor Cost Savings",
+        "value": 59,
+        "unit": "万元",
+        "unitEn": "万元"
+      },
+      {
+        "label": "异常发现周期缩短",
+        "labelEn": "Anomaly Discovery Cycle Reduction",
+        "value": 95,
+        "unit": "%",
+        "unitEn": "%"
+      },
+      {
+        "label": "溯源效率提升",
+        "labelEn": "Traceability Efficiency Gain",
+        "value": 99.8,
+        "unit": "%",
+        "unitEn": "%"
+      },
+      {
+        "label": "报表工作量减少",
+        "labelEn": "Report Workload Reduction",
+        "value": 50,
+        "unit": "%",
+        "unitEn": "%"
+      },
+      {
+        "label": "工位管控覆盖率",
+        "labelEn": "Station Coverage Rate",
+        "value": 100,
+        "unit": "%",
+        "unitEn": "%"
+      }
+    ],
+    "screenshots": [
+      "/uploads/screenshots/1784161087731-ku94hu.png",
+      "/uploads/screenshots/1784161089775-whp93v.png",
+      "/uploads/screenshots/1784161091530-1gk7iw.png"
+    ],
+    "videoUrl": "/uploads/videos/1784161102564-bau1fg.mp4"
+  },
+  {
+    "id": "ai-ppt",
+    "name": "BFCEC AI PPT",
+    "nameEn": "BFCEC AI PPT",
+    "excerpt": "LLM驱动的智能演示文稿生成平台，一键主题→完整PPT，智能配图+深度研究+多格式导出",
+    "excerptEn": "LLM-powered intelligent presentation platform — topic to full PPT in one click, smart image matching + deep research + multi-format export",
+    "description": "BFCEC AI PPT 是一个面向个人与企业的智能演示文稿生成平台。用户只需输入一个主题或上传一份已有文档，平台即可借助 AI 自动完成大纲构思、内容撰写、配图匹配、版式排版，最终输出一份专业、可编辑、可放映的演示文稿。平台核心定位：让“做 PPT”从费时费力的手工劳动变成一键驱动的自动化流程，同时保留足够的可控性与编辑空间。主要能力涵盖一键生成、智能配图、深度研究、并行生成、在线编辑、丰富模板、多格式导出（PDF/HTML/PPTX/DOCX/Markdown）及企业级本地部署。",
+    "descriptionEn": "BFCEC AI PPT is an intelligent presentation generation platform for individuals and enterprises. Users simply input a topic or upload an existing document, and the platform leverages AI to automatically handle outline design, content writing, image matching, and layout — delivering a professional, editable, presentable deck. The core positioning: transform 'making PPTs' from laborious manual work into a one-click automated process, while retaining full controllability and editing flexibility. Key capabilities include one-click generation, intelligent image matching, deep research, parallel generation, online editing, rich templates, multi-format export (PDF/HTML/PPTX/DOCX/Markdown), and enterprise-grade on-premise deployment.",
+    "category": "效率工具",
+    "categoryEn": "Efficiency Tools",
+    "scenario": "重复性工作",
+    "scenarioEn": "Repetitive Work",
+    "status": "published",
+    "recommended": true,
+    "thumb": "/uploads/thumbnails/ai-ppt.png",
+    "before": "单份 PPT 从构思大纲、撰写内容、搜集配图到排版调整，往往需要数小时甚至一整天。内容构思起点高，面对空白文档无从下手。配图需在多个图库反复检索，排版依赖设计经验。资料陈旧难更新，讲稿/音频/视频需分别制作。文件分散本地，缺乏统一管理与协作机制。",
+    "beforeEn": "A single presentation — from outline planning, content writing, image sourcing to layout adjustment — often took hours to a full day. Content ideation had a high starting barrier with blank-page paralysis. Image sourcing required searching across multiple libraries. Layout depended on design experience. Materials quickly became outdated, and speaker notes/audio/video had to be produced separately. Files were scattered locally with no unified management or collaboration.",
+    "after": "输入主题后分钟级自动产出完整初稿，AI 自动生成结构化大纲并可一键起步。智能配图自动匹配+生成，契合度高且省时。专业模板与自适应版式，风格统一美观。集成深度研究自动整合最新信息。一套流程同时产出 PPT、讲稿、讲解音视频。统一账号管理 + 一键公开分享，支持本地部署数据可控。",
+    "afterEn": "A complete first draft is auto-generated within minutes after entering a topic — AI produces a structured outline ready to go. Intelligent image matching and generation delivers high-fit visuals with zero time cost. Professional templates with adaptive layouts ensure consistent, polished styling. Integrated deep research auto-integrates the latest information. A single workflow produces the PPT, speaker notes, and audio/video simultaneously. Unified account management with one-click sharing, plus on-premise deployment for data sovereignty.",
+    "painPoints": "1. 耗时漫长：一份 20 页演示文稿需数小时至一整天，从大纲到排版全手工\n2. 内容构思困难：面对空白文档无从下手，结构组织能力参差不齐\n3. 配图繁琐低效：多图库反复检索筛选裁剪，版权不明，契合度低\n4. 排版美化门槛高：非设计背景难以做出专业统一页面，手动调整耗时\n5. 信息时效性不足：传统方式难快速整合最新资料，数据案例易过时\n6. 协作与复用困难：文件分散本地，无统一管理分享机制，重复劳动普遍\n7. 二次输出成本高：讲稿、音频、视频需另行制作，拉长整体周期",
+    "painPointsEn": "1. Time-consuming: A 20-page presentation takes hours to a full day — entirely manual from outline to layout\n2. Content ideation difficult: Blank-page paralysis with uneven structural organization skills\n3. Image sourcing tedious: Repeated searching, filtering, cropping across multiple libraries with unclear copyright and low relevance\n4. High design barrier: Non-designers struggle to create professional, consistent pages — manual tweaking is time-consuming\n5. Outdated information: Traditional methods can't quickly integrate the latest materials — data and cases become stale\n6. Poor collaboration & reuse: Files scattered locally, no unified management or sharing — widespread duplicate work\n7. High secondary output cost: Speaker notes, audio, and video must be produced separately, extending the overall cycle",
+    "solution": "BFCEC AI PPT 提供端到端的 AI 驱动解决方案\n\n🎯 八大核心能力：\n  ● AI 接管创建：主题/文档输入 → 自动大纲构思 → 全文生成，消除空白文档困境\n  ● 智能配图：AI 根据内容自动匹配/生成图像，支持网络图库与 AI 生成双源获取\n  ● 丰富模板+自适应版式：内置多场景模板，支持参考 PPTX 提取版式，AI 自适应生成专属模板\n  ● 深度研究：集成多搜索引擎，自动获取整合最新网络信息，保障内容时效性\n  ● 一体化二次输出：一套流程同时产出 PPT + 演讲稿 + 讲解音频 + 讲解视频（含字幕）\n  ● 可控可编辑：大纲可编辑、页面可在线微调、AI 聊天助手对话式修改、支持指定阶段重跑\n  ● 统一管理与分享：账号体系集中管理项目，公开分享链接、全屏放映、批量操作\n  ● 企业级安全与集成：支持本地部署，提供 API 对接脚本/CI/第三方流程工具\n\n🔄 典型流程：需求确认 → 大纲生成 → 进度追踪 → PPT 生成与配图 → 在线编辑与导出",
+    "solutionEn": "BFCEC AI PPT delivers an end-to-end AI-driven solution\n\n🎯 Eight Core Capabilities:\n  ● AI-Powered Creation: Topic/document input → auto outline → full content generation, eliminating blank-page paralysis\n  ● Intelligent Image Matching: AI auto-matches/generates images per slide content, supporting web search and AI generation dual-source\n  ● Rich Templates + Adaptive Layout: Built-in multi-scenario templates, PPTX reference extraction, AI adaptive custom template generation\n  ● Deep Research: Multi-search-engine integration auto-fetches and integrates the latest web information for content freshness\n  ● Integrated Multi-Format Output: One workflow simultaneously produces PPT + speaker notes + audio narration + video (with subtitles)\n  ● Controllable & Editable: Editable outlines, online page tweaking, AI chat assistant for conversational edits, stage-specific rerun support\n  ● Unified Management & Sharing: Account-based project management, public share links, full-screen presentation, batch operations\n  ● Enterprise Security & Integration: On-premise deployment, API for scripts/CI/third-party workflow tools\n\n🔄 Typical Flow: Requirements → Outline → Progress tracking → PPT generation & imaging → Online editing & export",
+    "benefits": [
+      {
+        "label": "制作周期压缩",
+        "labelEn": "Production Cycle Reduction",
+        "value": 90,
+        "unit": "%"
+      },
+      {
+        "label": "配图省时",
+        "labelEn": "Image Sourcing Time Saved",
+        "value": 100,
+        "unit": "%"
+      },
+      {
+        "label": "多形态输出",
+        "labelEn": "Multi-Format Outputs",
+        "value": 5,
+        "unit": "种格式"
+      },
+      {
+        "label": "API可集成",
+        "labelEn": "API Integration Ready",
+        "value": 100,
+        "unit": "%"
+      }
+    ],
+    "screenshots": [
+      "/uploads/screenshots/1783659612235-allkxh.png",
+      "/uploads/screenshots/1783659614857-ydfred.png",
+      "/uploads/screenshots/1783659617075-kxc4eo.png",
+      "/uploads/screenshots/1783659619745-vnbyp1.png",
+      "/uploads/screenshots/1783659624759-j6qzvx.png",
+      "/uploads/screenshots/1783659627924-6qs24r.png",
+      "/uploads/screenshots/1783659630192-ur2qqq.png",
+      "/uploads/screenshots/1783659632513-0rr0y9.png"
+    ],
+    "videoUrl": "/uploads/videos/1784093715442-bzayzd.mp4"
+  },
+  {
+    "id": "ai-material-check",
+    "name": "AI核料系统",
+    "nameEn": "AI Material Verification System",
+    "excerpt": "AI编程重构EBS核料计算逻辑，纳入偏离与预审，解耦老旧系统，前瞻60天供需管理",
+    "excerptEn": "AI-coding rebuild of EBS material check logic — deviation & pre-audit integrated, legacy decoupled, 60-day forward supply-demand management",
+    "description": "利用 AI 编程辅助，重新梳理 EBS 中的核料计算逻辑，优化计算方法，解耦关键环节，清除呆滞数据和低质量代码，弥补缺失业务因素，补充外围功能，制作新的友好核料界面。系统自动汇集供应商交付信息、库存数据与在途信息，智能识别并精准定位真正的缺料信息；平台包含未来 60 天数据供需分析，实现前瞻性的供需管理；偏离核料计算全面自动化，替代手工线下管偏离，彻底摒弃偏离手工表格管理，消除“系统算一套，手工调一套”的双重工作量。",
+    "descriptionEn": "Leveraging AI coding assistance to restructure the material verification calculation logic in EBS — optimizing calculation methods, decoupling key components, clearing stale data and low-quality code, filling in missing business factors, adding peripheral functionality, and building a new user-friendly material check interface. The system auto-aggregates supplier delivery info, inventory data, and in-transit info to intelligently identify and precisely locate genuine material shortages. The platform includes 60-day forward supply-demand analysis for proactive management. Deviation material check is fully automated, replacing manual offline deviation management and eliminating the double workload of 'system calculates one set, manual adjusts another'.",
+    "category": "智能工厂",
+    "categoryEn": "Smart Factory",
+    "scenario": "重复性工作",
+    "scenarioEn": "Repetitive Work",
+    "status": "published",
+    "recommended": true,
+    "thumb": "/uploads/thumbnails/ai-material-check.png",
+    "before": "计划员核料工作量大、耗时长、效率低（MP 团队 + VPI P&L 16 人，每人每天核料约 3-4 小时，识别缺口后发邮件给供应商收集缺料信息）。平台无预审数据，依赖老 OA 报表，无法细化到天。核料计算逻辑不含偏离，必须配合手工表处理偏离零件，工作量大且存在缺料风险。不提供单一 SO/零件的溯源，缺料问题定位难。Oracle EBS 作为重资产应用，开发黏度过高、二次开发灵活度低、前后台未完全分离、界面古老、核心运算时间长相互影响、运维风险高。",
+    "beforeEn": "Heavy planner workload, long and inefficient material check (MP team + VPI P&L 16 people, ~3-4 hours/day each, emailing suppliers to collect shortage info after identifying gaps). No pre-audit data on the platform — reliant on legacy OA reports, cannot drill down to daily level. Calculation logic excluded deviation factors, requiring manual tables for deviation parts — heavy workload with shortage risk. No traceability for single SO/part, making shortage localization difficult. Oracle EBS as a heavyweight app had high development stickiness, low secondary development flexibility, no full front-back separation, dated UI, long interdependent core computations, and high ops risk.",
+    "after": "核料效率革命性提升：系统自动汇集供应商交付、库存与在途信息，智能识别并精准定位真正的缺料信息。实现前瞻性供需管理：平台包含未来 60 天供需分析。偏离核料计算全面自动化：纳入偏离，替代手工线下管偏离——告别手工表格，消除“系统算一套，手工调一套”双重工作量；所有偏离因素线上化、标准化，计算口径一致结果准确；自动记录所有偏离数据，为成本分析和流程优化提供依据。数据全链路透明可溯：系统可解释单一 SO 或零件的数据计算逻辑。开发 Agent 实现少量数据快速查询/核对，外延企业微信实现供应商快捷沟通/提醒。",
+    "afterEn": "Revolutionary efficiency gain: system auto-aggregates supplier delivery, inventory, and in-transit info to intelligently identify and precisely locate genuine shortages. Proactive supply-demand management: platform includes 60-day forward analysis. Fully automated deviation material check: deviation factors integrated, replacing manual offline management — goodbye to manual spreadsheets, eliminating the double workload of 'system calculates one set, manual adjusts another'; all deviation factors standardized online for consistent, accurate calculations; all deviation data auto-recorded for cost analysis and process optimization. Full-chain transparent traceability: system explains the calculation logic for any single SO or part. An Agent enables quick query/verification of small datasets; WeCom extension enables quick supplier communication/reminders.",
+    "painPoints": "1. 多重数据核料，每个计划员每天核料约 3-4 小时（MP 团队 + VPI P&L 16 人），识别缺口后发邮件给供应商收集缺料信息，工作量大效率低\n2. 核料不包含偏离信息，目前人工核对偏离零件，工作量大且存在缺料风险\n3. Oracle EBS 作为重资产应用，开发黏度过高，二次开发灵活度低，前后台未完全分离，界面层开发成本高且交互界面古老\n4. EBS 核心运算时间长，相互影响，系统调整空窗期小，运维风险高\n5. 平台无预审数据，依赖老 OA 报表，无法细化到天；不提供单一 SO/零件溯源，缺料问题定位难",
+    "painPointsEn": "1. Multi-source material check — each planner spends ~3-4 hours/day (MP team + VPI P&L 16 people), emailing suppliers for shortage info after identifying gaps, heavy workload and low efficiency\n2. Material check excludes deviation info — manual checking of deviation parts is heavy and carries shortage risk\n3. Oracle EBS as a heavyweight app — high development stickiness, low secondary development flexibility, no full front-back separation, high UI development cost and dated interaction\n4. Long EBS core computation time with interdependencies, small adjustment windows, high ops risk\n5. No pre-audit data on platform — reliant on legacy OA reports, cannot drill down to day; no single SO/part traceability, hard to localize shortages",
+    "solution": "利用 AI 编程辅助，重新梳理 EBS 核料计算逻辑，优化计算方法，解耦关键环节，制作新核料界面\n\n🎯 核心举措：\n  ● 重新梳理核料业务流程，剥离非必须依赖 EBS 传统开发模式的部分，局部实现解耦\n  ● 利用 AI 编程把偏离信息加入到核料计算逻辑中\n  ● 利用 AI 编程把预审信息加入到核料计算逻辑中\n  ● 利用 AI 识别原有程序中重复或冗余部分，优化查询算法\n  ● 尽量分割运算单元，保留中间计算结果，实现业务块数据可复用\n  ● 开发新的核料数据查询界面\n  ● 开发 Agent，实现少量数据的快速查询或核对\n  ● 外延网站功能，利用企业微信通用平台实现对供应商的快捷沟通/提醒\n\n🔄 能力升级：自动汇集供应商交付/库存/在途信息 → 智能识别精准缺料 → 未来 60 天前瞻供需分析 → 偏离计算全面自动化 → 全链路数据可溯",
+    "solutionEn": "Use AI coding assistance to restructure EBS material check logic, optimize calculation methods, decouple key components, and build a new check interface\n\n🎯 Core Initiatives:\n  ● Restructure material check workflow, peel off parts not strictly dependent on legacy EBS dev model, achieve local decoupling\n  ● Use AI coding to add deviation info into the calculation logic\n  ● Use AI coding to add pre-audit info into the calculation logic\n  ● Use AI to identify redundant/duplicate parts in legacy code, optimize query algorithms\n  ● Split computation units, retain intermediate results for reusable business data blocks\n  ● Develop new material check data query interface\n  ● Develop an Agent for quick query/verification of small datasets\n  ● Extend site functionality via WeCom for quick supplier communication/reminders\n\n🔄 Capability Upgrade: auto-aggregate supplier delivery/inventory/in-transit → intelligent shortage identification → 60-day forward supply-demand analysis → fully automated deviation calculation → full-chain traceable data",
+    "benefits": [
+      {
+        "label": "每日核料工时缩减",
+        "labelEn": "Daily Check Time Saved",
+        "value": 3,
+        "unit": "小时→≈1小时"
+      },
+      {
+        "label": "覆盖计划员",
+        "labelEn": "Planners Covered",
+        "value": 16,
+        "unit": "人"
+      },
+      {
+        "label": "前瞻供需分析",
+        "labelEn": "Forward Supply-Demand Horizon",
+        "value": 60,
+        "unit": "天"
+      },
+      {
+        "label": "偏离手工表",
+        "labelEn": "Manual Deviation Tables",
+        "value": 100,
+        "unit": "% 线上化"
+      }
+    ],
+    "screenshots": [],
+    "videoUrl": ""
+  },
+  {
+    "id": "market-ai",
+    "name": "市场与业务分析智能体",
+    "nameEn": "ASKME",
+    "excerpt": "自然语言驱动的市场分析智能体，秒级接入多源数据，智能归因+情报联动，1分钟出分析结论",
+    "excerptEn": "NL-driven market analysis agent — multi-source data in seconds, intelligent attribution + intelligence linkage, insights in 1 minute",
+    "description": "针对商用汽车市场分析中数据来源分散、人工处理耗时、临时需求响应慢及市场情报易遗漏等问题，构建了市场与业务分析智能体——ASKME。ASKME 通过自动接入多种内外部数据，统一清洗与业务口径，并结合自然语言交互、智能归因和市场情报联动能力，让业务人员无需手工整合数据或编写复杂查询，即可快速获得多维度市场分析结论、风险预警及决策建议。同时，ASKME 具备主动监测与情报联动能力，定时推送分析报告，自动抓取行业政策、竞品动态及研报信息并与内部数据交叉验证，大幅提升了市场洞察的及时性、准确性与决策响应速度。",
+    "descriptionEn": "ASKME is a market and business analysis agent built for commercial vehicle market analysis, addressing pain points of scattered data sources, time-consuming manual processing, slow ad-hoc response, and easily missed market intelligence. ASKME automatically ingests multiple internal and external data sources, unifies cleansing and business metrics, and combines natural language interaction, intelligent attribution, and market intelligence linkage — enabling business users to quickly obtain multi-dimensional market analysis conclusions, risk alerts, and decision recommendations without manual data integration or complex queries. ASKME also features proactive monitoring and intelligence linkage, regularly pushing analysis reports, automatically capturing industry policies, competitor dynamics, and research reports with cross-validation against internal data — significantly improving the timeliness, accuracy, and decision-making speed of market insights.",
+    "category": "数据分析",
+    "categoryEn": "Data Analytics",
+    "scenario": "经验驱动决策",
+    "scenarioEn": "Experience-Driven Decisions",
+    "status": "published",
+    "recommended": true,
+    "thumb": "/uploads/thumbnails/market-ai.png",
+    "before": "业务分析依赖人工从多个来源导出、整合和清洗数据，每周需投入约 6-10 小时。面对多维度、临时性分析需求，通常需要手工构建筛选条件并反复制作报表，平均响应时间约 60 分钟。市场情报依赖人工搜集和整理，难以及时与经营数据联动验证，且手工处理易带来口径不一致和数据错误。",
+    "beforeEn": "Business analysis relied on manual extraction, integration, and cleansing from multiple sources, taking 6-10 hours weekly. Multi-dimensional and ad-hoc analysis required manually building filters and repeatedly creating reports, averaging ~60 min response time. Market intelligence depended on manual collection and organization, difficult to cross-validate with operational data in time, with manual processing prone to metric inconsistency and data errors.",
+    "after": "ASKME 可秒级接入多类数据来源，自动完成数据治理，原本每周 6-10 小时的人工处理工作缩短至后台约 5 分钟完成。任意维度组合查询与分析总结可在 1 分钟内完成，约 80% 的临时分析需求由小时级缩短至分钟级；复杂分析可在 5 分钟内完成。市场情报实现每日自动汇总，并与经营数据即时联动验证。数据错误率可由手工模式的 5%-10% 降至 0.1% 以下，帮助团队从重复数据处理中释放出来，专注于策略研究和高价值决策支持。",
+    "afterEn": "ASKME ingests multi-source data in seconds with automated data governance, reducing 6-10 hours of weekly manual work to ~5 minutes of background processing. Any-dimension queries and analysis summaries complete within 1 minute; ~80% of ad-hoc analysis requests reduced from hours to minutes; complex analysis completed within 5 minutes. Market intelligence is auto-summarized daily with instant cross-validation against operational data. Data error rate drops from 5-10% (manual) to below 0.1%, freeing teams from repetitive data processing to focus on strategic research and high-value decision support.",
+    "painPoints": "1. 数据来源多且格式不统一，人工整合、清洗和口径对齐工作量大\n2. 分析维度复杂，多层级筛选与交叉下钻依赖人工操作，效率低\n3. 简单查询与深度分析均需经历导出、整理、透视等完整流程，无法按需求灵活匹配分析深度\n4. 临时、紧急分析需求频繁，响应周期长，业务决策时效受限\n5. 行业政策、竞品动态及研报等市场情报分散，依赖人工搜集和记忆，容易遗漏或滞后\n6. 手工合并数据易出现单位、缺失值和统计口径不一致，影响分析准确性与决策质量",
+    "painPointsEn": "1. Multiple data sources with inconsistent formats — heavy manual integration, cleansing, and metric alignment workload\n2. Complex analytical dimensions — multi-level filtering and cross-drilldown rely on manual operation with low efficiency\n3. Both simple queries and deep analysis require the full pipeline of export, organize, and pivot — unable to flexibly match analysis depth to needs\n4. Frequent urgent ad-hoc analysis requests with long response cycles, limiting business decision timeliness\n5. Industry policies, competitor dynamics, and research reports are scattered, dependent on manual collection and memory, easily missed or delayed\n6. Manual data merging introduces unit errors, missing values, and metric inconsistency — affecting analysis accuracy and decision quality",
+    "solution": "构建集数据治理、智能分析、风险预警于一体的市场与业务分析智能体——ASKME\n\n🛠️ 数据来源：行业统计数据、市场销量数据、内部经营数据、预测数据、库存与实销数据、市场情报等\n\n🎯 核心功能：\n  ● 自动数据接入与清洗：自动汇聚多源数据，完成字段、单位、粒度及业务口径统一\n  ● 多维智能分析：支持任意维度组合的即时查询与下钻分析，自动生成分析总结与数据解读\n  ● 自然语言问答：业务人员可直接提出问题，快速获取数据结论、趋势判断和分析摘要\n  ● 智能归因分析：针对销量变化、市场波动等问题，自动识别关键影响因素并输出解释\n  ● 主动预警与报告：持续监测核心指标，自动发现异常、市场拐点和潜在风险，定时推送分析报告\n  ● 市场情报联动：自动汇总行业政策、竞品新闻和研究报告，并与内部经营表现交叉验证\n\n🧠 大模型应用：专家知识注入 → 自然语言交互 → 需求智能识别 → 自动归因总结 → 情报提炼 → 决策支持\n\n🔄 系统流程：多源数据自动接入 → 自动数据治理 → 多维预聚合 → 自然语言查询 → 智能归因与预警 → 自动报告与决策支持",
+    "solutionEn": "Build an integrated market and business analysis agent — ASKME — combining data governance, intelligent analysis, and risk alerting\n\n🛠️ Data Sources: Industry statistics, market sales data, internal operational data, forecast data, inventory & sell-through data, market intelligence, etc.\n\n🎯 Core Features:\n  ● Auto Data Ingestion & Cleansing: Automatically aggregates multi-source data, unifying fields, units, granularity, and business metrics\n  ● Multi-Dimensional Intelligent Analysis: Supports instant queries with any dimension combination and drill-down, auto-generating analysis summaries and data interpretations\n  ● Natural Language Q&A: Business users can ask questions directly and quickly get data conclusions, trend judgments, and analysis summaries\n  ● Intelligent Attribution Analysis: For issues like sales changes and market fluctuations, automatically identifies key influencing factors and outputs explanations\n  ● Proactive Alerting & Reporting: Continuously monitors core metrics, auto-detects anomalies, market inflection points, and potential risks, regularly pushing analysis reports\n  ● Market Intelligence Linkage: Automatically aggregates industry policies, competitor news, and research reports with cross-validation against internal operational performance\n\n🧠 LLM Application: Expert knowledge injection → Natural language interaction → Demand intelligent recognition → Auto-attribution summary → Intelligence extraction → Decision support\n\n🔄 System Flow: Multi-source auto-ingestion → Auto data governance → Multi-dimensional pre-aggregation → NL query → Intelligent attribution & alerting → Auto reporting & decision support",
+    "benefits": [
+      {
+        "label": "数据清洗从周到分钟",
+        "labelEn": "Data Cleaning Time",
+        "value": 6,
+        "unit": "h/周→5min",
+        "unitEn": "h/周→5min"
+      },
+      {
+        "label": "临时分析响应",
+        "labelEn": "Ad-Hoc Analysis Response",
+        "value": 80,
+        "unit": "%< 1min",
+        "unitEn": "%< 1min"
+      },
+      {
+        "label": "数据错误率降至",
+        "labelEn": "Error Rate Reduction",
+        "value": 0.1,
+        "unit": "% 以下",
+        "unitEn": "% 以下"
+      },
+      {
+        "label": "复杂分析完成",
+        "labelEn": "Complex Analysis Time",
+        "value": 5,
+        "unit": "分钟内",
+        "unitEn": "分钟内"
+      }
+    ],
+    "screenshots": [
+      "/uploads/screenshots/1783659382064-p6mr27.png",
+      "/uploads/screenshots/1783659384445-3e5ghl.png",
+      "/uploads/screenshots/1783659386372-1pfujf.png"
+    ],
+    "videoUrl": "/uploads/videos/1784092396436-bhavdp.mp4"
+  },
+  {
+    "id": "ai-platform",
+    "name": "企业智能体平台",
+    "nameEn": "Enterprise Agent Platform",
+    "excerpt": "统一入口+四大能力平台+多级安全管控，智能体开发周期缩短至1-2周，能力复用率>80%",
+    "excerptEn": "Unified portal + 4 capability platforms + multi-tier security — agent dev cycle cut to 1-2 weeks, >80% capability reuse",
+    "description": "针对当前企业内部智能体建设分散、各业务部门独立开发导致能力无法复用、安全管控缺失、员工使用入口不统一等痛点，构建了一套企业级智能体平台。平台通过搭建本地化部署的智能体基础设施，为企业员工提供统一的智能体入口，集中发布和管理所有智能体。平台具备智能体技能市场、知识中心、工具注册中心、大模型平台四大核心能力模块，支持多级安全管控机制，统一接入企业资产，为智能体开发提供标准化的企业接入能力和大模型调用能力。将原来各部门各自为战的智能体开发模式，转变为平台化、标准化的统一运营模式，显著提升智能体开发效率和安全合规水平。",
+    "descriptionEn": "An enterprise-grade agent platform built to address the pain points of fragmented agent development across business units, non-reusable capabilities, missing security controls, and scattered employee access points. The platform provides localized agent infrastructure with a unified portal for employees to access all agents. It features four core capability modules — Agent Skill Marketplace, Knowledge Center, Tool Registry, and LLM Platform — with multi-tier security controls and unified enterprise asset integration. This transforms the siloed agent development model into a standardized, platform-based operation, significantly improving development efficiency and security compliance.",
+    "category": "智能平台",
+    "categoryEn": "Smart Platform",
+    "scenario": "专家依赖",
+    "scenarioEn": "Expert Dependence",
+    "status": "published",
+    "recommended": true,
+    "thumb": "/uploads/thumbnails/ai-platform.png",
+    "before": "各业务部门独立开发智能体，平均每个智能体从开发到上线需 4-6 周，大量时间花在重复的企业系统对接和安全适配上。员工需在多个入口间切换使用不同智能体，体验碎片化。大模型 API 调用分散管理，费用难预估，安全事件无法追溯。",
+    "beforeEn": "Business units independently developed agents, averaging 4-6 weeks from development to launch, with most time spent on repetitive enterprise system integration and security adaptation. Employees switched between multiple portals for different agents, leading to fragmented experience. LLM API calls were managed disparately with unpredictable costs and untraceable security incidents.",
+    "after": "基于平台标准化工具和知识能力，智能体开发周期缩短至 1-2 周。员工通过统一入口访问所有智能体，体验一致。大模型调用统一管控，费用透明可控。全链路安全审计，满足企业合规要求。",
+    "afterEn": "With standardized platform tools and knowledge capabilities, agent development cycle reduced to 1-2 weeks. Employees access all agents through a unified portal with consistent experience. LLM calls are centrally managed with transparent, controllable costs. Full-chain security audit meets enterprise compliance requirements.",
+    "painPoints": "1. 智能体建设分散，各业务部门独立开发，技术栈不统一，能力无法复用，重复建设严重\n2. 缺乏统一的智能体发布入口，员工需要在多个系统间切换，使用体验碎片化，学习成本高\n3. 智能体安全管控缺失，缺乏统一的权限管理、数据脱敏、审计追溯机制，存在数据泄露风险\n4. 企业数据资产（ERP、OA、CRM、数据仓库等）接入方式各异，智能体开发时需要反复对接，效率低下\n5. 大模型调用缺乏统一管理，各部门分别申请 API Key，费用不可控，模型版本混乱，无法统一评估和优化",
+    "painPointsEn": "1. Fragmented agent development across business units with inconsistent tech stacks, non-reusable capabilities, and serious redundant construction\n2. No unified agent publishing portal — employees switch between multiple systems with fragmented experience and high learning costs\n3. Missing agent security controls — no unified permission management, data masking, or audit traceability, posing data leakage risks\n4. Enterprise data assets (ERP, OA, CRM, data warehouse, etc.) have disparate access methods, requiring repeated integration during agent development, causing low efficiency\n5. LLM calls lack unified management — departments apply for API keys separately, costs are uncontrolled, model versions are chaotic, impossible to evaluate and optimize centrally",
+    "solution": "构建统一入口 + 四大能力平台 + 多级安全管控的企业智能体基础设施\n\n🎯 四大能力平台：\n  ● 智能体技能市场：集中发布和管理所有智能体，支持分类检索、版本管理、灰度发布、使用统计，员工通过统一入口即可访问全部智能体\n  ● 知识中心：统一管理企业知识库，支持文档、FAQ、流程规范等多类型知识接入，为智能体提供标准化的知识检索能力\n  ● 工具注册中心：集中注册和管理企业工具能力（API、数据库查询、文件操作等），智能体开发时可直接调用已注册工具，无需重复开发\n  ● 大模型平台：统一接入和管理多种大模型（本地部署 + 云端 API），提供模型路由、负载均衡、用量统计、效果评估等能力\n\n🛡️ 多级安全管控：\n  ● 应用级管控：智能体上线审批、权限分级、使用范围限制\n  ● 数据级管控：敏感数据脱敏、字段级权限控制、数据传输加密\n  ● 模型级管控：大模型调用鉴权、Prompt 安全审查、输出内容过滤\n  ● 审计追溯：全链路操作日志、调用记录、异常告警\n\n🔗 企业资产统一接入：业务系统（ERP/OA/CRM/HR/财务）、数据资产（数据仓库/数据湖/文件系统）、身份认证（SSO/LDAP）\n\n⚙️ 技术架构：本地化部署 + 微服务架构 + 标准化 API 网关",
+    "solutionEn": "Build an enterprise agent infrastructure with unified portal + 4 capability platforms + multi-tier security\n\n🎯 Four Capability Platforms:\n  ● Agent Skill Marketplace: Centralized publishing and management of all agents with categorized search, version management, canary releases, usage statistics — employees access all agents through a single portal\n  ● Knowledge Center: Unified enterprise knowledge base management supporting documents, FAQs, process specifications — providing standardized knowledge retrieval for agents\n  ● Tool Registry: Centralized registration and management of enterprise tools (APIs, database queries, file operations, etc.) — agents can directly invoke registered tools without redundant development\n  ● LLM Platform: Unified access and management of multiple LLMs (on-premise + cloud APIs) with model routing, load balancing, usage statistics, and effectiveness evaluation\n\n🛡️ Multi-Tier Security:\n  ● Application-level: Agent launch approval, permission tiering, usage scope restrictions\n  ● Data-level: Sensitive data masking, field-level access control, data transmission encryption\n  ● Model-level: LLM call authentication, prompt security review, output content filtering\n  ● Audit: Full-chain operation logs, call records, anomaly alerts\n\n🔗 Unified Enterprise Asset Integration: Business systems (ERP/OA/CRM/HR/Finance), Data assets (warehouse/lake/filesystem), Identity (SSO/LDAP)\n\n⚙️ Technical Architecture: On-premise deployment + microservices + standardized API gateway",
+    "benefits": [
+      {
+        "label": "开发周期缩短",
+        "labelEn": "Dev Cycle Reduction",
+        "value": 4,
+        "unit": "周→1-2周",
+        "unitEn": "周→1-2周"
+      },
+      {
+        "label": "能力复用率",
+        "labelEn": "Capability Reuse Rate",
+        "value": 80,
+        "unit": "%",
+        "unitEn": "%"
+      },
+      {
+        "label": "安全管控层级",
+        "labelEn": "Security Control Tiers",
+        "value": 4,
+        "unit": "级",
+        "unitEn": "级"
+      },
+      {
+        "label": "统一入口覆盖",
+        "labelEn": "Unified Portal Coverage",
+        "value": 100,
+        "unit": "%",
+        "unitEn": "%"
+      }
+    ],
+    "screenshots": [
+      "/uploads/screenshots/1783654233241-euhoaf.png",
+      "/uploads/screenshots/1783654235688-hdygqq.png",
+      "/uploads/screenshots/1783654238179-dzsyii.png",
+      "/uploads/screenshots/1783654240614-xxxopx.png"
+    ],
+    "videoUrl": "/uploads/videos/1784028612837-5zl3gt.mp4"
+  },
+  {
+    "beforeEn": "SO structure entry and modification relied entirely on manual line-by-line operations — cumbersome steps with high repetition. All data checking and verification depended on manual work, highly prone to entry errors and data deviations. Single SO processing took up to 20 minutes with extremely low efficiency for batch business, causing severe response delays. Dedicated staff were long occupied by basic data entry, limited to low-value repetitive labor without time for business analysis, process optimization, or management — plus long onboarding training cycles with no standardized business processes.",
+    "id": "ai-bom",
+    "name": "AI辅助BOM搭建",
+    "nameEn": "RPA-Powered SO & BOM Automation",
+    "excerpt": "RPA机器人流程自动化重构SO录入，自动解析+智能校验+批量并发，处理效率提升80%+",
+    "excerptEn": "RPA-driven SO entry automation — auto-parsing + intelligent validation + batch concurrency, 80%+ efficiency gain",
+    "description": "针对康明斯 IMS 系统传统 SO 结构录入修改流程人工依赖性强、操作繁琐、出错率高、处理效率低下、人力价值浪费等业务痛点，项目引入机器人流程自动化技术，对 SO 结构录入修改全流程进行重构与自动化改造。通过搭建自动化录入与校验体系，替代传统人工逐条录入、人工复核模式，实现模板自动解析、数据自动校验、批量并发处理，彻底优化 SO 新增修改全业务流程，达成流程效率、数据质量、人力效能的全方位升级，为业务快速响应、高质量标准化交付提供坚实支撑。",
+    "descriptionEn": "Addressing the business pain points of heavy manual dependency, cumbersome operations, high error rates, low processing efficiency, and wasted human capital in the traditional SO structure entry and modification process of the Cummins IMS system, this project introduces Robotic Process Automation (RPA) technology to reconstruct and automate the entire SO workflow. By building an automated entry and verification system, it replaces traditional manual line-by-line entry and manual review with auto template parsing, auto data validation, and batch concurrent processing — comprehensively optimizing the entire SO creation and modification business process to achieve all-around upgrades in process efficiency, data quality, and human productivity, providing solid support for rapid business response and high-quality standardized delivery.",
+    "category": "智能工厂",
+    "categoryEn": "Smart Factory",
+    "scenario": "重复性工作",
+    "scenarioEn": "Repetitive Work",
+    "status": "published",
+    "recommended": true,
+    "thumb": "/uploads/thumbnails/ai-bom.png",
+    "before": "SO 结构录入修改全程依靠人工逐条操作，步骤繁琐、重复性极强，所有数据核对、校验工作均依赖人工完成，极易出现录入错误、数据偏差等问题。单条 SO 处理耗时长达 20 分钟，面对批量业务时处理效率极低，业务响应严重滞后。专职业务人员长期被基础录入工作占用，只能从事低价值重复劳动，无暇开展业务分析、流程优化、统筹管理等高价值工作，且新人上手培训周期长，业务流程无统一标准。",
+    "after": "依托机器人流程自动化技术，彻底替代人工录入模式，系统可自动解析业务模板，完成全流程无人化处理，同时搭载智能校验机制，保障数据精准无误。支持批量并发处理业务，实现秒级响应，单条 SO 处理时间大幅压缩至 5 分钟以内。业务人员彻底摆脱重复录入工作，角色升级为业务审核与管理，聚焦高价值业务分析与决策。流程高度标准化、自动化，新人培训周期大幅缩短，业务规范性与稳定性全面提升。",
+    "afterEn": "RPA technology completely replaces manual entry — the system auto-parses business templates and completes full-process unattended processing with built-in intelligent verification ensuring data accuracy. Batch concurrent processing enables second-level response, compressing single SO processing time to under 5 minutes. Business staff are fully liberated from repetitive entry work, upgrading their roles to business review and management, focusing on high-value analysis and decision-making. Processes are highly standardized and automated, dramatically shortening new employee training cycles and comprehensively improving business standardization and stability.",
+    "painPoints": "1. 录入模式落后，依靠人工逐条录入，操作步骤繁琐，整体工作效率极低\n2. 数据校验完全依赖人工，人为操作失误多，数据录入错误率偏高，质量无法保障\n3. 单条 SO 处理耗时长，批量业务处理能力差，业务响应滞后，无法适配高效交付需求\n4. 专职人员长期耗费大量精力在低价值重复录入工作中，无法聚焦核心业务与管理工作\n5. 传统流程无标准化体系，新人上手慢，培训周期长，业务标准化程度低",
+    "painPointsEn": "1. Outdated entry model relying on manual line-by-line input — cumbersome steps with extremely low overall efficiency\n2. Data verification entirely dependent on manual work — frequent human errors, high data entry error rate, quality cannot be guaranteed\n3. Long single SO processing time with poor batch processing capability — business response lags behind, unable to meet efficient delivery requirements\n4. Dedicated staff spend significant energy on low-value repetitive entry work long-term, unable to focus on core business and management\n5. Traditional processes lack standardization — slow new employee onboarding, long training cycles, low business standardization",
+    "solution": "引入机器人流程自动化技术，重构康明斯 IMS 系统 SO 结构录入修改全流程，搭建全自动标准化 SO 处理体系\n\n🛠️ 数据来源：标准化 SO 业务模板、IMS 系统业务数据、流程校验规则数据\n\n🎯 核心功能：\n  ● 模板自动解析：系统自动识别、解析标准 SO 业务模板，无需人工手动录入信息\n  ● 全自动流程执行：实现 SO 录入全流程无人干预，系统自主完成业务处理\n  ● 智能数据校验：内置标准化校验规则，自动完成数据核对，规避人工失误\n  ● 批量并发处理：支持多 SO 批量同步处理，实现秒级快速响应业务需求\n\n🔄 系统流程：标准模板导入 → 系统自动解析数据 → 全自动录入 IMS 系统 → 处理结果反馈 → 批量闭环处理",
+    "solutionEn": "Introduce RPA technology to reconstruct the entire SO structure entry and modification process of the Cummins IMS system, building a fully automated standardized SO processing system\n\n🛠️ Data Sources: Standardized SO business templates, IMS system business data, process verification rule data\n\n🎯 Core Features:\n  ● Auto Template Parsing: System automatically identifies and parses standard SO business templates, eliminating manual information entry\n  ● Fully Automated Process Execution: Unattended SO entry full-process handling, system autonomously completes business processing\n  ● Intelligent Data Verification: Built-in standardized verification rules automatically complete data checking, avoiding human errors\n  ● Batch Concurrent Processing: Supports multi-SO batch synchronous processing with second-level rapid business response\n\n🔄 System Flow: Standard template import → Auto data parsing → Auto IMS entry → Result feedback → Batch closed-loop processing",
+    "benefits": [
+      {
+        "label": "处理效率提升",
+        "labelEn": "Processing Efficiency Gain",
+        "value": 80,
+        "unit": "%+",
+        "unitEn": "%+"
+      },
+      {
+        "label": "数据错误率降低",
+        "labelEn": "Error Rate Reduction",
+        "value": 95,
+        "unit": "%+",
+        "unitEn": "%+"
+      },
+      {
+        "label": "流程自动化率",
+        "labelEn": "Process Automation Rate",
+        "value": 90,
+        "unit": "%+",
+        "unitEn": "%+"
+      },
+      {
+        "label": "单SO处理时间",
+        "labelEn": "Per-SO Processing Time",
+        "value": 5,
+        "unit": "分钟以内",
+        "unitEn": "分钟以内"
+      }
+    ],
+    "screenshots": [
+      "/uploads/screenshots/1783658399410-uj5ivq.png",
+      "/uploads/screenshots/1783658401749-2wuzqi.png",
+      "/uploads/screenshots/1783658404104-l05nd5.png"
+    ],
+    "videoUrl": "/uploads/videos/1784086759415-3s9f10.mp4"
+  },
+  {
+    "beforeEn": "No such functionality existed. Many terms were not understood, especially by new employees",
+    "id": "qua-term-helper",
+    "before": "无此功能，很多名词的意思大家不理解，尤其是对于新入职员工",
+    "after": "对话式秒出结果，知识管理和传承",
+    "nameEn": "QUA Terminology Assistant",
+    "excerptEn": "Instant conversational terminology lookup for knowledge management",
+    "status": "draft",
+    "benefits": [
+      {
+        "label": "知识传承效率",
+        "unit": "%",
+        "labelEn": "Knowledge Transfer",
+        "value": 100,
+        "unitEn": "%"
+      }
+    ],
+    "description": "利用Dify建立知识库快速开发完成。解决新入职员工不理解专业名词含义的痛点，通过对话式交互秒出结果，实现知识管理和传承。",
+    "recommended": false,
+    "categoryEn": "Efficiency Tools",
+    "excerpt": "对话式秒出名词解释，知识管理与传承",
+    "afterEn": "Conversational instant results for knowledge management and transfer",
+    "name": "QUA名词助手",
+    "descriptionEn": "Rapidly developed using Dify knowledge base. Addresses the pain point of new employees not understanding professional terminology. Conversational interaction delivers instant results for knowledge management and transfer.",
+    "thumb": "/uploads/thumbnails/qua-term-helper.png",
+    "category": "效率工具",
+    "scenario": "",
+    "scenarioEn": "",
+    "painPoints": "",
+    "painPointsEn": "",
+    "solution": "",
+    "solutionEn": ""
+  },
+  {
+    "beforeEn": "BIMS system had no conversational query functionality",
+    "id": "bims-qa-helper",
+    "before": "BIMS系统的信息无对话式查询功能",
+    "after": "对话式查询信息，支持智能总结和建议，随时问随时答",
+    "nameEn": "BIMS Quality Issue Query Assistant",
+    "excerptEn": "Conversational quality info query with smart summaries and suggestions",
+    "status": "draft",
+    "benefits": [
+      {
+        "label": "查询体验升级",
+        "unit": "%",
+        "labelEn": "Query UX Upgrade",
+        "value": 100,
+        "unitEn": "%"
+      }
+    ],
+    "description": "BIMS系统的信息无对话式查询功能，计划换AI工具开发。实现对话式查询信息，支持智能总结和建议，随时问随时答，体验完全升级。",
+    "recommended": false,
+    "categoryEn": "Smart Quality",
+    "excerpt": "对话式查询质量信息，支持智能总结和建议",
+    "afterEn": "Conversational info query with smart summaries and suggestions. Ask anytime, answer instantly",
+    "name": "BIMS质量问题查询助手",
+    "descriptionEn": "BIMS system lacked conversational query functionality. Planning to redevelop with AI tools. Enables conversational info query with smart summaries and suggestions. Ask anytime, answer instantly. Complete UX upgrade.",
+    "thumb": "/uploads/thumbnails/bims-qa-helper.png",
+    "category": "智能质量",
+    "scenario": "",
+    "scenarioEn": "",
+    "painPoints": "",
+    "painPointsEn": "",
+    "solution": "",
+    "solutionEn": ""
+  },
+  {
+    "beforeEn": "Quality inspection data scattered across stages. Root cause tracing heavily manual. Lacked dynamic monitoring and deep correlation analysis of key factors",
+    "id": "machining-quality-ai",
+    "before": "机加工质量检测数据分散于各加工环节，根因追溯高度依赖人工，缺乏关键关联因子的动态监测与深度关联分析",
+    "after": "构建感知—分析—决策—优化一体化的质量智能管控闭环",
+    "nameEn": "Machining Quality AI",
+    "excerptEn": "AI auto-attribution, failure mode recognition, quality risk quantification",
+    "status": "draft",
+    "benefits": [
+      {
+        "label": "质量管控闭环",
+        "unit": "%",
+        "labelEn": "Quality Control Loop",
+        "value": 100,
+        "unitEn": "%"
+      }
+    ],
+    "description": "收到来自机加质量的AI需求。当前机加工质量检测数据分散于各加工环节，质量问题根因追溯高度依赖人工。亟需引入AI实现质量问题的自动归因、失效模式智能识别、质量风险量化评估，构建'感知—分析—决策—优化'一体化的质量智能管控闭环。",
+    "recommended": false,
+    "categoryEn": "Smart Quality",
+    "excerpt": "AI自动归因、失效模式识别、质量风险量化评估",
+    "afterEn": "Build integrated quality intelligent control closed loop: perception → analysis → decision → optimization",
+    "name": "机加质量AI",
+    "descriptionEn": "Received AI requirements from machining quality team. Quality inspection data scattered across machining stages with root cause tracing heavily dependent on manual work. Urgently needs AI for auto-attribution, intelligent failure mode recognition, and quality risk quantification to build an integrated quality intelligent control closed loop.",
+    "thumb": "/uploads/thumbnails/machining-quality-ai.png",
+    "category": "智能质量",
+    "scenario": "",
+    "scenarioEn": "",
+    "painPoints": "",
+    "painPointsEn": "",
+    "solution": "",
+    "solutionEn": ""
+  },
+  {
+    "beforeEn": "After ETL scheduling failures, manual re-execution and troubleshooting was required",
+    "id": "smart-scheduler",
+    "before": "ETL调度任务出问题后，手工去重新执行，排错",
+    "after": "实现智能化判断，减少手工，提高效率，自动排错",
+    "nameEn": "Smart Scheduling Platform",
+    "excerptEn": "ETL scheduling auto-management with intelligent diagnosis and auto-recovery",
+    "status": "draft",
+    "benefits": [
+      {
+        "label": "自动化排错",
+        "unit": "%",
+        "labelEn": "Auto-Recovery",
+        "value": 100,
+        "unitEn": "%"
+      }
+    ],
+    "description": "调度任务自动管理分析平台。当ETL调度任务出问题时，不再需要手工去重新执行和排错，实现智能化判断，减少手工操作，提高效率，自动排错。",
+    "recommended": false,
+    "categoryEn": "Smart Platform",
+    "excerpt": "ETL调度任务自动管理，智能判断与自动排错",
+    "afterEn": "Intelligent diagnosis, reduced manual work, improved efficiency with auto-recovery",
+    "name": "智能调度平台",
+    "descriptionEn": "Automated scheduling task management and analysis platform. When ETL scheduling tasks fail, no longer needs manual re-execution and troubleshooting. Achieves intelligent diagnosis, reduces manual operations, improves efficiency with auto-recovery.",
+    "thumb": "/uploads/thumbnails/smart-scheduler.png",
+    "category": "智能平台",
+    "scenario": "",
+    "scenarioEn": "",
+    "painPoints": "",
+    "painPointsEn": "",
+    "solution": "",
+    "solutionEn": ""
+  },
+  {
+    "id": "ops-assistant",
+    "name": "AI运维助手",
+    "nameEn": "AI Ops Assistant",
+    "excerpt": "大模型赋能运维，自然语言驱动巡检诊断，堡垒机统一入口+高危命令拦截+全程审计",
+    "excerptEn": "LLM-empowered ops — NL-driven inspection & diagnosis, bastion unified entry + dangerous command interception + full audit",
+    "description": "基于大模型能力赋能日常运维工作，帮助运维人员实现异常问题的及时发现、快速诊断与高效处置，提高运维效率和系统稳定性。平台以企业现有的 JumpServer 堡垒机为统一入口，将本地部署的大语言模型能力引入运维场景。运维人员通过自然语言即可完成对 Linux / Windows 服务器的巡检、故障诊断等操作。",
+    "descriptionEn": "An AI Ops Assistant that empowers daily operations with large language model capabilities, helping ops staff achieve timely detection, rapid diagnosis, and efficient handling of anomalies — improving operational efficiency and system stability. The platform uses the enterprise's existing JumpServer bastion host as a unified entry point, bringing locally-deployed LLM capabilities into ops scenarios. Operators can complete inspections and fault diagnosis on Linux/Windows servers through natural language.",
+    "category": "智能平台",
+    "categoryEn": "Smart Platform",
+    "scenario": "智能运维与故障诊断",
+    "scenarioEn": "Intelligent Ops & Fault Diagnosis",
+    "status": "published",
+    "recommended": false,
+    "thumb": "/uploads/thumbnails/ops-assistant.png",
+    "before": "多系统频繁切换，人工排查效率低：需在多个系统间频繁切换，人工查看当前系统状态、指标数据和大量日志，问题定位耗时。处置流程链路长：从告警触发到问题确认、根因分析、处置执行，整体流程较长。缺少统一分析诊断能力：问题分析主要依赖人员手动判断，命令怎么写、输出怎么解读高度依赖个人经验。人工操作多、风险高：处理步骤多效率低，容易因遗漏或误操作带来额外风险。",
+    "beforeEn": "Frequent multi-system switching with low manual troubleshooting efficiency: switching between multiple systems, manually checking system status, metrics, and large volumes of logs — problem localization is time-consuming. Long handling workflow: from alert trigger to problem confirmation, root cause analysis, and remediation — the entire chain is lengthy. No unified diagnostic capability: analysis relies heavily on individual experience for command writing and output interpretation. Heavy manual operations with high risk: many steps, low efficiency, prone to omissions or misoperation.",
+    "after": "统一入口+自然语言驱动：登录助手平台 → 用自然语言描述问题 → AI 生成诊断命令 → 高危拦截 → 执行 → 输出结构化诊断报告。交互终端+AI 实时辅助：网页版终端体验等同本地 SSH，右侧 AI 面板自动分析命令输出并实时反馈。全程堡垒机权限不绕过，危险命令自动拦截，全量审计日志可追溯。",
+    "afterEn": "Unified entry + NL-driven: login assistant → describe problem in natural language → AI generates diagnostic commands → dangerous command interception → execute → output structured diagnostic report. Interactive terminal + AI real-time assistance: web terminal with local SSH-equivalent experience, AI panel auto-analyzes command output with real-time feedback. Full bastion-based access without bypassing existing permissions, automatic dangerous command interception, and full audit log traceability.",
+    "painPoints": "1. 多系统频繁切换，人工排查效率低：需在多个系统间频繁切换，人工查看系统状态、指标数据和大量日志，问题定位耗时且效率低\n2. 处置流程链路长：从告警触发到问题确认、根因分析、处置执行，整体流程较长\n3. 缺少统一的分析诊断能力：当前问题分析主要依赖人员手动判断，命令怎么写、输出怎么解读高度依赖个人经验，缺少统一、标准化的分析诊断能力\n4. 人工操作多、风险高：人工处理步骤多、效率低，也容易因遗漏或误操作带来额外风险",
+    "painPointsEn": "1. Frequent multi-system switching with low manual efficiency — switching between systems, manually checking status/metrics/logs, time-consuming problem localization\n2. Long handling workflow — from alert trigger to confirmation, root cause analysis, and remediation, the entire chain is lengthy\n3. No unified diagnostic capability — analysis relies on manual judgment and individual experience for command writing and output interpretation, lacking standardized diagnostic capability\n4. Heavy manual operations with high risk — many manual steps with low efficiency, prone to omissions or misoperation bringing additional risk",
+    "solution": "平台围绕“问题描述 → AI 生成命令 → 高危命令拦截 → AI 诊断分析”主线，构建统一的智能诊断能力\n\n1️⃣ 统一入口与登录：\n  ● 直接使用堡垒机账号登录（含 MFA 验证码）\n  ● 登录后自动同步堡垒机管理的全部主机资产，免去多系统切换和手动同步\n\n2️⃣ 智能诊断（自然语言驱动）：\n  ● 运维人员用自然语言描述问题（如“检查磁盘使用情况”“排查内存占用高的进程”）\n  ● AI 解析意图 → 按目标平台（Linux/Windows）自动生成巡检/诊断命令 → 安全校验 → 执行\n  ● 命令与输出实时流式展示，最终 AI 输出结构化诊断报告：系统当前状态、发现的问题、处理建议\n\n3️⃣ 交互终端 + AI 实时辅助：\n  ● 网页版交互式终端，体验等同本地 SSH\n  ● 右侧 AI 面板自动分析每条命令输出并实时反馈，也可随时向 AI 提问，辅助处置执行\n\n4️⃣ 安全审计：\n  ● 危险命令自动拦截（rm -rf、mkfs、shutdown 等）\n  ● 全量审计日志：记录命令、目标主机、输出、耗时、风险等级、执行状态，全程可追溯",
+    "solutionEn": "The platform centers on the workflow 'Problem description → AI generates commands → Dangerous command interception → AI diagnostic analysis', building unified intelligent diagnostic capability\n\n1️⃣ Unified Entry & Login:\n  ● Login directly with bastion host account (including MFA verification)\n  ● Auto-sync all host assets managed by the bastion host after login, eliminating multi-system switching and manual sync\n\n2️⃣ Intelligent Diagnosis (NL-driven):\n  ● Operators describe problems in natural language (e.g. 'check disk usage', 'investigate high memory processes')\n  ● AI parses intent → auto-generates inspection/diagnostic commands per target platform (Linux/Windows) → security check → execute\n  ● Real-time streaming of commands and output, with AI outputting structured diagnostic reports: current system status, issues found, handling recommendations\n\n3️⃣ Interactive Terminal + AI Real-time Assistance:\n  ● Web-based interactive terminal with local SSH-equivalent experience\n  ● Right-side AI panel auto-analyzes each command output with real-time feedback, and accepts questions anytime to assist remediation\n\n4️⃣ Security Audit:\n  ● Automatic interception of dangerous commands (rm -rf, mkfs, shutdown, etc.)\n  ● Full audit logs: command, target host, output, duration, risk level, execution status — fully traceable",
+    "benefits": [
+      {
+        "label": "操作步骤减少",
+        "labelEn": "Steps Reduction",
+        "value": 80,
+        "unit": "%"
+      },
+      {
+        "label": "问题定位提速",
+        "labelEn": "Problem Localization Speedup",
+        "value": 1,
+        "unit": "句话"
+      },
+      {
+        "label": "高危命令拦截",
+        "labelEn": "Dangerous Command Interception",
+        "value": 100,
+        "unit": "%"
+      },
+      {
+        "label": "诊断标准化",
+        "labelEn": "Standardized Diagnostics",
+        "value": 100,
+        "unit": "%"
+      }
+    ],
+    "screenshots": [
+      "/uploads/screenshots/1784029089823-aktbd6.png",
+      "/uploads/screenshots/1784029092118-eljsm6.png",
+      "/uploads/screenshots/1784029094222-5hw02h.png",
+      "/uploads/screenshots/1784029096454-4f68cb.png",
+      "/uploads/screenshots/1784029098747-x9j187.png"
+    ],
+    "videoUrl": ""
+  },
+  {
+    "id": "cv-resume-screening",
+    "name": "智能简历筛选",
+    "nameEn": "AI-Powered Resume Screening",
+    "excerpt": "AI驱动简历智能筛选与分析，大模型语义匹配+多维评分精准评估候选人",
+    "excerptEn": "AI-driven intelligent resume screening with LLM semantic matching and multi-dimensional candidate scoring",
+    "description": "针对当前简历筛选效率低、人工依赖度高以及专业判断难等痛点，创新构建“AI简历筛选智能体”。该智能体采用大模型语义匹配技术，能够自动解析多格式简历，实时智能分析简历与JD的匹配程度；并通过多维度评分体系精准评估候选人综合能力并生成面试建议，显著提升了简历筛选的效率与准确性，有效支撑了招聘环节的快速响应。同时，系统基于大语言模型深度打通了简历解析、JD智能理解、技能语义匹配等多个核心能力。我们将资深HR的筛选经验与评估标准转化为智能体的核心技能，实现了对候选人简历的专业化评估与智能分析。这一举措大幅缩短了简历筛选周期，显著降低了技术岗位匹配判断的门槛与难度，真正实现了招聘筛选的智能化升级。",
+    "descriptionEn": "An innovative 'AI Resume Screening Agent' built to address pain points of inefficient resume screening, high manual dependency, and difficult professional judgment. The agent uses LLM semantic matching technology to automatically parse multi-format resumes and intelligently analyze resume-to-JD matching in real-time. Through a multi-dimensional scoring system, it precisely evaluates candidate comprehensive capabilities and generates interview recommendations, significantly improving screening efficiency and accuracy to support rapid recruitment response. The system deeply integrates core capabilities including resume parsing, intelligent JD understanding, and skill semantic matching via large language models. Senior HR screening experience and evaluation standards are transformed into the agent's core skills, enabling professional candidate assessment and intelligent analysis. This dramatically shortens screening cycles and significantly lowers the barriers to technical role matching judgment — truly achieving intelligent recruitment screening.",
+    "category": "智能平台",
+    "categoryEn": "Smart Platform",
+    "scenario": "重复性工作",
+    "scenarioEn": "Repetitive Work",
+    "status": "published",
+    "recommended": true,
+    "thumb": "/uploads/thumbnails/cv-resume-screening.png",
+    "before": "● 人工逐份阅读简历，每份耗时3-5分钟，高峰期单岗位数百份简历初筛需2-3个工作日\n● 筛选标准因人而异，不同HR评估结果波动大，公平性与一致性难以保证\n● 技术岗位JD专业性强，HR缺乏工程背景，难以独立判断技术匹配度，容易遗漏优质候选人\n● 筛选依赖人工经验，知识传承困难，新人上手周期长，分析一致性差\n● 简历数据分散难以沉淀，人才库复用价值未发挥",
+    "beforeEn": "● Manual resume-by-resume review, 3-5 minutes each. Peak season: hundreds of resumes per position taking 2-3 working days for initial screening\n● Inconsistent screening standards — significant variation across HR evaluators, fairness and consistency difficult to guarantee\n● Technical JDs highly specialized — HR lacks engineering background, struggles to independently judge technical fit, easily missing quality candidates\n● Screening dependent on individual experience — knowledge transfer difficult, long onboarding for new staff, poor analysis consistency\n● Resume data scattered and hard to accumulate — talent pool reuse value unrealized",
+    "after": "● AI自动解析评估，单份简历30秒内完成，批量简历1小时内完成初筛，效率提升10倍+\n● 统一评估标准与权重模型，公平性与一致性显著改善，筛选质量稳定可靠\n● 大模型语义匹配分析，AI赋能技术岗位匹配判断，减少优质候选人遗漏\n● 专家经验系统化沉淀，新人快速上手，评估一致性大幅提升\n● 人才库自动归档，支持历史简历检索复用，释放人才数据价值",
+    "afterEn": "● AI auto-parsing and evaluation — 30 seconds per resume, batch screening within 1 hour, 10x+ efficiency gain\n● Unified evaluation standards and weight models — fairness and consistency significantly improved, screening quality stable and reliable\n● LLM semantic matching — AI-empowered technical role matching, reduced quality candidate omissions\n● Systematic expert experience accumulation — rapid onboarding for new staff, significantly improved evaluation consistency\n● Auto-archived talent pool — historical resume search and reuse enabled, unlocking talent data value",
+    "painPoints": "1. 简历筛选效率低、人工依赖高，单份简历阅读3-5分钟，高峰期无法及时处理，导致优秀候选人流失\n2. 简历筛选标准不统一，不同HR评估差异大，公平性与一致性难以保证\n3. 技术岗位JD专业性强，HR缺乏工程背景，难以独立判断技术匹配度，容易遗漏优质候选人\n4. 简历筛选依赖大量人工阅读，数据分散难以沉淀，人才库复用价值未发挥\n5. 筛选依赖人工经验，知识传承困难，新人上手周期长，分析一致性差",
+    "painPointsEn": "1. Low screening efficiency with high manual dependency — 3-5 minutes per resume; peak volumes cannot be processed timely, leading to quality candidate loss\n2. Inconsistent screening standards — significant variation across different HR evaluators, fairness and consistency difficult to guarantee\n3. Technical JDs highly specialized — HR lacks engineering background, struggles to independently judge technical fit, easily missing quality candidates\n4. Screening depends on extensive manual reading — data scattered and hard to accumulate, talent pool reuse value unrealized\n5. Screening dependent on individual experience — knowledge transfer difficult, long onboarding cycles for new staff, poor analysis consistency",
+    "solution": "构建AI驱动的简历智能筛选与分析系统\n\n🛠 数据来源：简历数据（PDF/Word/图片）、JD岗位说明书、企业人才库、招聘渠道数据等\n\n🎯 核心功能：\n  ● 智能解析：多格式简历解析、OCR识别、结构化信息提取\n  ● JD理解：岗位要求结构化、能力画像构建、权重配置\n  ● 多维匹配：硬性条件过滤、技能语义匹配、经验相关性评估\n  ● 综合评分：多维权重评分、匹配度排序、评估报告生成\n\n🧠 大模型应用：\n  ● 专家知识注入：资深HR提供筛选标准、评估逻辑框架与历史案例\n  ● 模型训练：大模型学习专家筛选方法，构建简历评估知识库\n  ● 推理应用：基于学习成果对新简历进行智能评估与推理分析\n\n🔄 系统流程：简历上传解析 → JD智能理解 → 多维匹配评估 → 综合评分排序 → 面试建议生成 → 人机协同审核",
+    "solutionEn": "Build an AI-driven intelligent resume screening and analysis system\n\n🛠 Data Sources: Resume data (PDF/Word/Images), JD documents, enterprise talent pool, recruitment channel data, etc.\n\n🎯 Core Features:\n  ● Intelligent Parsing: Multi-format resume parsing, OCR recognition, structured information extraction\n  ● JD Understanding: Job requirement structuring, competency profile building, weight configuration\n  ● Multi-Dimensional Matching: Hard requirement filtering, skill semantic matching, experience relevance assessment\n  ● Comprehensive Scoring: Multi-dimensional weighted scoring, match ranking, assessment report generation\n\n🧠 LLM Application:\n  ● Expert Knowledge Injection: Senior HR provides screening standards, evaluation frameworks, and historical cases\n  ● Model Training: LLM learns expert screening methods, building a resume assessment knowledge base\n  ● Inference Application: Intelligent assessment and reasoning on new resumes based on learned outcomes\n\n🔄 System Flow: Resume upload & parsing → JD intelligent understanding → Multi-dimensional matching → Comprehensive scoring & ranking → Interview recommendation → Human-AI collaborative review",
+    "benefits": [
+      {
+        "label": "单份处理时间",
+        "labelEn": "Per-Resume Processing",
+        "value": 30,
+        "unit": "秒",
+        "unitEn": "秒"
+      },
+      {
+        "label": "匹配准确率提升",
+        "labelEn": "Matching Accuracy Improvement",
+        "value": 20,
+        "unit": "%+",
+        "unitEn": "%+"
+      },
+      {
+        "label": "筛选工时节约",
+        "labelEn": "Screening Time Saved",
+        "value": 70,
+        "unit": "%",
+        "unitEn": "%"
+      },
+      {
+        "label": "专家经验覆盖率",
+        "labelEn": "Expert Knowledge Coverage",
+        "value": 98,
+        "unit": "%",
+        "unitEn": "%"
+      },
+      {
+        "label": "候选人满意度提升",
+        "labelEn": "Candidate Satisfaction Increase",
+        "value": 20,
+        "unit": "%",
+        "unitEn": "%"
+      }
+    ],
+    "screenshots": [
+      "/uploads/screenshots/1783578409598-8a2ju3.png",
+      "/uploads/screenshots/1783578432912-afryco.png",
+      "/uploads/screenshots/1783578435594-v57o1l.png"
+    ],
+    "videoUrl": "/uploads/videos/1784024028389-105je7.mp4"
+  },
+  {
+    "id": "rps-ergo-assessment",
+    "name": "RPS 人机工程智能评估智能体",
+    "nameEn": "RPS Ergonomic Intelligent Assessment Agent",
+    "excerpt": "MediaPipe姿态估计+Qwen-VL多模态大模型，3分钟自动完成RPS人机工程评估与风险报告",
+    "excerptEn": "MediaPipe pose estimation + Qwen-VL multimodal LLM, automated RPS ergonomic assessment and risk report in 3 minutes",
+    "description": "针对当前人体工程评估效率低、主观性强、证据弱、无闭环等核心痛点，创新构建“RPS 人机工程智能评估智能体”。该智能体采用 MediaPipe 姿态估计与 Qwen-VL 多模态大模型相融合的混合架构，能够自动提取作业视频中人体 33 个关键点，实时计算 6 大部位关节角度并识别 5 类身体压力源；通过 YAML 规则引擎精准执行 RPS 评分标准，自动输出风险等级与逐条评分依据，显著提升了评估效率与一致性，有效遏制了肌肉骨骼损伤（WMSDs）风险。同时，系统基于大语言模型深度打通了姿态识别、物体检测、视频理解与规则评分等多个技术环节。我们将资深 EHS 工程师的评估经验转化为可配置的规则知识库，实现了对人体工程风险的自动化诊断与智能分析。这一举措大幅缩短了单工位评估周期，显著降低了评估门槛与主观偏差，真正实现了人体工程管理的智能化升级。",
+    "descriptionEn": "An innovative 'RPS Ergonomic Intelligent Assessment Agent' built to address core pain points of inefficient, subjective, evidence-weak ergonomic assessments. The agent uses a hybrid architecture combining MediaPipe pose estimation with Qwen-VL multimodal LLM to automatically extract 33 human keypoints from work videos, calculate 6 major joint angles in real-time, and identify 5 categories of physical stressors. A YAML-based rule engine precisely executes RPS scoring criteria, automatically outputting risk levels with itemized scoring evidence — significantly improving assessment efficiency and consistency while effectively curbing WMSDs risks. The system deeply integrates pose recognition, object detection, video understanding, and rule-based scoring via LLM. Senior EHS engineer assessment experience is transformed into a configurable rule knowledge base, enabling automated diagnosis and intelligent analysis of ergonomic risks. This dramatically shortens per-station assessment cycles and significantly lowers assessment barriers and subjective bias — truly achieving intelligent ergonomic management.",
+    "category": "智能工厂",
+    "categoryEn": "Smart Factory",
+    "scenario": "经验驱动决策",
+    "scenarioEn": "Experience-Driven Decisions",
+    "status": "published",
+    "recommended": true,
+    "thumb": "/uploads/thumbnails/rps-ergo-assessment.png",
+    "before": "评估周期：每工位人工现场观察 + 填表，耗时 30-60 分钟\n评估一致性：因人而异，不同评估人结果偏差大\n证据可溯性：纸质表格，无法回溯动作场景\n覆盖能力：抽样评估，全厂覆盖不可行\n分析耗时：单工位完整分析需 30 分钟",
+    "beforeEn": "Cycle: On-site manual observation + form filling, 30-60 min per station\nConsistency: Results vary significantly across different assessors\nTraceability: Paper forms, unable to trace back to specific motion scenes\nCoverage: Sampling-based, full plant coverage infeasible\nAnalysis Time: 30 min per station for complete analysis",
+    "after": "评估周期：上传视频后 AI 自动评估，3 分钟出报告\n评估一致性：规则确定，同一视频多次评分 100% 可复现\n证据可溯性：每条评分依据可追溯到视频帧 + 关节角度数值\n覆盖能力：全工位批量评估，可持续常态化运行\n分析耗时：单工位完整分析缩短至 3 分钟",
+    "afterEn": "Cycle: AI auto-assessment after video upload, report in 3 min\nConsistency: Rule-determined, 100% reproducible across runs\nTraceability: Every score traceable to video frame + joint angle values\nCoverage: Batch assessment of all stations, sustainable continuous operation\nAnalysis Time: Complete per-station analysis reduced to 3 min",
+    "painPoints": "1. 效率瓶颈：当前人体工程评估依赖工程师现场观察 + 手工填表，单工位完整 RPS 评估需 30-60 分钟，难以覆盖全厂数百工位\n2. 主观偏差：不同评估人对姿势判断不一致，评估结果可比性差，跨车间、跨周期数据无法对标\n3. 证据缺失：纸质评分表无法回溯具体动作场景，整改建议缺乏数据支撑，难以说服产线落实改善\n4. 经验断层：评估能力高度依赖资深工程师个人经验，知识传承困难，人员变动后评估质量难以保障",
+    "painPointsEn": "1. Efficiency bottleneck: Ergonomic assessment depends on engineer on-site observation + manual forms. Complete RPS assessment takes 30-60 min per station, impossible to cover hundreds of plant stations\n2. Subjective bias: Different assessors judge postures inconsistently. Poor comparability across workshops and cycles, data cannot be benchmarked\n3. Missing evidence: Paper scoring forms cannot trace back to specific motion scenes. Improvement recommendations lack data support, hard to convince production lines to implement changes\n4. Experience gap: Assessment capability highly dependent on senior engineer experience. Knowledge transfer difficult, assessment quality cannot be guaranteed after personnel changes",
+    "solution": "构建 AI 驱动的人体工程视频评估与风险分析系统\n\n🛠️ 数据来源：工位作业视频（手机侧面拍摄）、RPS 评分标准规则库、EHS 工程师评估经验\n\n🎯 核心功能：\n  ● 智能识别：MediaPipe 提取 33 个人体关键点，自动计算手/肘/肩/颈/背/腿 6 部位关节角度\n  ● 风险评估：Qwen-VL 识别振动/低温/软组织压迫/冲击/手套 5 项压力源，规则引擎执行 RPS 评分并输出风险等级\n  ● 智能分析：Qwen-Plus 大模型自动生成评分依据与改善建议报告，可追溯到具体视频帧\n\n🧠 大模型应用：\n  ● 专家知识注入：EHS 工程师提供 RPS 评估标准、关节角度阈值、压力源判定逻辑与典型案例\n  ● 规则建模：评估标准以 YAML 配置形式存储，大模型学习专家分析方法，构建人体工程评估知识库\n  ● 推理应用：基于姿态数据与视频关键帧进行智能分析与推理，EHS 可自助迭代规则无需改代码\n\n🔄 系统流程：视频上传 → 姿态估计 → 压力源识别 → 规则评分 → 风险预警 → 报告生成",
+    "solutionEn": "Build an AI-driven ergonomic video assessment and risk analysis system\n\n🛠️ Data Sources: Station work videos (mobile phone side-angle capture), RPS scoring criteria rule base, EHS engineer assessment experience\n\n🎯 Core Features:\n  ● Intelligent Recognition: MediaPipe extracts 33 human keypoints, auto-calculates joint angles for hands/elbows/shoulders/neck/back/legs (6 regions)\n  ● Risk Assessment: Qwen-VL identifies 5 stressor types (vibration/cold/soft tissue compression/impact/gloves), rule engine executes RPS scoring with risk level output\n  ● Intelligent Analysis: Qwen-Plus LLM auto-generates scoring evidence and improvement recommendations, traceable to specific video frames\n\n🧠 LLM Application:\n  ● Expert Knowledge Injection: EHS engineers provide RPS assessment criteria, joint angle thresholds, stressor judgment logic, and typical cases\n  ● Rule Modeling: Assessment criteria stored as YAML configuration, LLM learns expert analysis methods to build ergonomic assessment knowledge base\n  ● Inference Application: Intelligent analysis and reasoning based on pose data and video keyframes, EHS can self-serve rule iteration without code changes\n\n🔄 System Flow: Video upload → Pose estimation → Stressor identification → Rule scoring → Risk alert → Report generation",
+    "benefits": [
+      {
+        "label": "评估效率提升",
+        "labelEn": "Assessment Efficiency Gain",
+        "value": 10,
+        "unit": "倍",
+        "unitEn": "倍"
+      },
+      {
+        "label": "评分一致性",
+        "labelEn": "Scoring Consistency",
+        "value": 100,
+        "unit": "%",
+        "unitEn": "%"
+      },
+      {
+        "label": "单工位评估时间",
+        "labelEn": "Per-Station Assessment Time",
+        "value": 3,
+        "unit": "分钟",
+        "unitEn": "分钟"
+      },
+      {
+        "label": "经验规则化覆盖率",
+        "labelEn": "Expert Knowledge Codification",
+        "value": 100,
+        "unit": "%",
+        "unitEn": "%"
+      }
+    ],
+    "screenshots": [
+      "/uploads/screenshots/1783579156015-5igz59.png",
+      "/uploads/screenshots/1783579158410-gj4zft.png",
+      "/uploads/screenshots/1783579160924-yw6ij1.png"
+    ],
+    "videoUrl": "/uploads/videos/1784030258329-lwdl5s.mp4"
+  }
+]
