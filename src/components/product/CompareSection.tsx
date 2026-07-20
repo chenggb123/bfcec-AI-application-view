@@ -35,12 +35,11 @@ export function CompareSection({ before, beforeEn, after, afterEn }: CompareSect
       <div className="compare-grid">
         {/* Before */}
         <div
-          className="relative"
+          className="relative p-4 sm:p-6"
           style={{
             background: 'var(--surface-tint)',
             border: '1px solid var(--border)',
             borderRadius: '16px',
-            padding: '24px',
           }}
         >
           <span
@@ -83,12 +82,11 @@ export function CompareSection({ before, beforeEn, after, afterEn }: CompareSect
 
         {/* After */}
         <div
-          className="relative"
+          className="relative p-4 sm:p-6"
           style={{
             background: 'rgba(218,41,28,0.04)',
             border: '1px solid rgba(218,41,28,0.12)',
             borderRadius: '16px',
-            padding: '24px',
           }}
         >
           <span

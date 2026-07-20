@@ -28,9 +28,8 @@ export default function ProductsClient({ products, categories }: ProductsClientP
         style={{
           maxWidth: '1200px',
           margin: '0 auto',
-          padding: '0 40px 80px',
         }}
-        className="max-sm:px-4"
+        className="px-4 sm:px-8 lg:px-10 pb-16 sm:pb-20"
       >
         <ProductToolbar
           products={products}

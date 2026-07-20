@@ -92,7 +92,7 @@ export function ProductCard({ product, delay = 0 }: ProductCardProps) {
           {/* Content (z-index above beam) */}
           <div className="relative z-[1]">
             {/* Thumbnail area */}
-            <div className="relative h-[190px] overflow-hidden">
+            <div className="relative h-[140px] sm:h-[190px] overflow-hidden">
               {/* Grid pattern (::before equivalent) */}
               <div
                 className="absolute inset-0 z-10 pointer-events-none"
@@ -151,7 +151,7 @@ export function ProductCard({ product, delay = 0 }: ProductCardProps) {
             </div>
 
             {/* Card body */}
-            <div style={{ padding: '22px' }}>
+            <div className="px-[16px] py-[14px] sm:px-[22px] sm:py-[22px]">
               {/* Top row: category chip + status badge */}
               <div className="flex items-center justify-between mb-[10px]">
                 <Chip active>{categoryLabel}</Chip>
@@ -161,7 +161,7 @@ export function ProductCard({ product, delay = 0 }: ProductCardProps) {
               {/* Title */}
               <h3
                 title={title}
-                className="font-display text-[17px] font-semibold tracking-[-0.01em] mb-[8px] text-fg-primary overflow-hidden text-ellipsis whitespace-nowrap"
+                className="font-display text-[15px] sm:text-[17px] font-semibold tracking-[-0.01em] mb-[6px] sm:mb-[8px] text-fg-primary overflow-hidden text-ellipsis whitespace-nowrap"
               >
                 {title}
               </h3>

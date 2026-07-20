@@ -22,8 +22,7 @@ export function CapabilityCards() {
       `}</style>
 
       <section
-        className="section relative z-[1] py-24 px-10 max-w-[1400px] mx-auto"
-        style={{ padding: '96px 40px' }}
+        className="section relative z-[1] px-4 sm:px-8 lg:px-10 pt-14 sm:pt-20 pb-14 sm:pb-24 max-w-[1400px] mx-auto"
       >
         <Reveal>
           <span
@@ -43,14 +42,7 @@ export function CapabilityCards() {
         </Reveal>
         <Reveal delay={2}>
           <h2
-            style={{
-              fontFamily: 'var(--font-display)',
-              fontSize: '38px',
-              fontWeight: 700,
-              letterSpacing: '-0.025em',
-              lineHeight: 1.18,
-              marginBottom: '16px',
-            }}
+            className="font-display text-[26px] sm:text-[32px] lg:text-[38px] font-bold tracking-[-0.025em] leading-[1.18] mb-4"
           >
             {t('capTitle')}
           </h2>
@@ -167,12 +159,6 @@ export function CapabilityCards() {
         </div>
       </section>
 
-      <style>{`
-        @media (max-width: 640px) {
-          .section { padding: 56px 16px; }
-          .section h2 { font-size: 26px; }
-        }
-      `}</style>
     </>
   )
 }

@@ -6,7 +6,6 @@ import { usePathname } from 'next/navigation'
 import { useI18n } from '@/lib/i18n'
 import { cn } from '@/lib/cn'
 import styles from './Nav.module.css'
-import { ThemeToggle } from './ThemeToggle'
 
 /* Inline Cummins logo SVG path data */
 const LOGO_PATH =
@@ -114,9 +113,6 @@ export function Nav() {
           >
             EN
           </button>
-        </li>
-        <li>
-          <ThemeToggle />
         </li>
       </ul>
 

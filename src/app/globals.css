@@ -116,47 +116,6 @@ html::-webkit-scrollbar-thumb:hover {
   --radius-lg: 16px;
 }
 
-/* ── Light theme overrides ──
-   Redeclares both the :root plain vars AND the @theme --color-* tokens so
-   that Tailwind v4 utilities (bg-surface, text-fg-muted, border-border...)
-   and inline var(--bg)/var(--fg) references flip at runtime. Brand red is
-   intentionally NOT redeclared — identical in both themes. */
-[data-theme="light"] {
-  --bg: #ffffff;
-  --surface: #f5f5f5;
-  --fg: #1a1a1a;
-  --muted: #6b6b6b;
-  --border: rgba(0, 0, 0, 0.10);
-  --border-hover: rgba(0, 0, 0, 0.18);
-  --surface-tint: rgba(0, 0, 0, 0.04);
-
-  --color-surface-bg: #ffffff;
-  --color-surface: #f5f5f5;
-  --color-fg-primary: #1a1a1a;
-  --color-fg-muted: #6b6b6b;
-  --color-border: rgba(0, 0, 0, 0.10);
-  --color-border-hover: rgba(0, 0, 0, 0.18);
-
-  /* Dark gradient text so it stays visible on a light background */
-  --text-gradient-hero: linear-gradient(90deg, #1a1a1a 0%, #000000 25%, #6b6b6b 50%, #000000 75%, #1a1a1a 100%);
-  --text-gradient-stat: linear-gradient(180deg, #1a1a1a 0%, #6b6b6b 100%);
-}
-[data-theme="light"] *::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.15);
-}
-[data-theme="light"] *::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 0, 0, 0.28);
-}
-[data-theme="light"] html,
-[data-theme="light"] body {
-  scrollbar-color: rgba(0, 0, 0, 0.15) transparent;
-}
-/* Light-mode: render the inverted-white logo as black so it stays visible */
-[data-theme="light"] .brand svg,
-[data-theme="light"] .footer-brand svg {
-  filter: brightness(0) !important;
-}
-
 /* ── Body base styles ── */
 body {
   font-family: var(--font-body);

@@ -94,17 +94,21 @@ export function StatsSection({ agentCount, categoryCount }: StatsSectionProps) {
   return (
     <>
       <style>{`
+        .stats-row {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 24px;
+        }
         @media (max-width: 1024px) {
-          .stats-row { grid-template-columns: repeat(2, 1fr); }
+          .stats-row { grid-template-columns: repeat(2, 1fr); gap: 16px; }
         }
         @media (max-width: 640px) {
-          .stats-row { grid-template-columns: 1fr; }
+          .stats-row { grid-template-columns: 1fr; gap: 14px; }
         }
       `}</style>
 
       <section
-        className="section relative z-[1] py-24 px-10 max-w-[1200px] mx-auto"
-        style={{ padding: '96px 40px' }}
+        className="section relative z-[1] px-4 sm:px-8 lg:px-10 pt-14 sm:pt-20 pb-14 sm:pb-24 max-w-[1200px] mx-auto"
       >
         <Reveal>
           <span
@@ -124,45 +128,25 @@ export function StatsSection({ agentCount, categoryCount }: StatsSectionProps) {
         </Reveal>
         <Reveal delay={2}>
           <h2
-            style={{
-              fontFamily: 'var(--font-display)',
-              fontSize: '38px',
-              fontWeight: 700,
-              letterSpacing: '-0.025em',
-              lineHeight: 1.18,
-              marginBottom: '16px',
-            }}
+            className="font-display text-[26px] sm:text-[32px] lg:text-[38px] font-bold tracking-[-0.025em] leading-[1.18] mb-4"
           >
             {t('statsTitle')}
           </h2>
         </Reveal>
         <Reveal delay={3}>
           <p
-            className="section-lead"
-            style={{
-              fontSize: '16px',
-              color: 'var(--muted)',
-              maxWidth: '560px',
-              lineHeight: 1.6,
-              marginBottom: '52px',
-            }}
+            className="text-[14px] sm:text-[16px] leading-relaxed mb-10 sm:mb-[52px] max-w-[560px]"
+            style={{ color: 'var(--muted)' }}
           >
             {t('statsDesc')}
           </p>
         </Reveal>
 
-        <div
-          className="stats-row"
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(4, 1fr)',
-            gap: '24px',
-          }}
-        >
+        <div className="stats-row">
           {stats.map((stat) => (
             <Reveal key={stat.label} delay={stat.delay}>
               <div
-                className="stat-card"
+                className="stat-card text-center py-8 sm:py-[44px] px-4 sm:px-6"
                 onMouseEnter={(e) => {
                   const el = e.currentTarget
                   el.style.borderColor = 'var(--accent)'
@@ -174,8 +158,6 @@ export function StatsSection({ agentCount, categoryCount }: StatsSectionProps) {
                   el.style.transform = ''
                 }}
                 style={{
-                  textAlign: 'center',
-                  padding: '44px 24px',
                   background: 'var(--surface-tint)',
                   border: '1px solid var(--border)',
                   borderRadius: '16px',
@@ -183,18 +165,12 @@ export function StatsSection({ agentCount, categoryCount }: StatsSectionProps) {
                 }}
               >
                 <div
+                  className="font-mono text-[36px] sm:text-[44px] lg:text-[52px] font-bold tracking-[-0.04em] leading-none mb-2 tabular-nums"
                   style={{
-                    fontFamily: 'var(--font-mono)',
-                    fontSize: '52px',
-                    fontWeight: 700,
-                    letterSpacing: '-0.04em',
                     background: 'var(--text-gradient-stat)',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
                     backgroundClip: 'text',
-                    fontVariantNumeric: 'tabular-nums',
-                    lineHeight: 1,
-                    marginBottom: '8px',
                   }}
                 >
                   {stat.animate ? (
@@ -216,14 +192,7 @@ export function StatsSection({ agentCount, categoryCount }: StatsSectionProps) {
             </Reveal>
           ))}
         </div>
-      </section>
-
-      <style>{`
-        @media (max-width: 640px) {
-          .section { padding: 56px 16px; }
-          .section h2 { font-size: 26px; }
-        }
-      `}</style>
+    </section>
     </>
   )
 }

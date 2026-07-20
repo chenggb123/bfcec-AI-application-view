@@ -2,13 +2,20 @@ import { NextRequest, NextResponse } from 'next/server'
 import { validateCredentials } from '@/lib/data/auth'
 import { createSessionToken, SESSION_COOKIE_NAME, SESSION_COOKIE_MAX_AGE } from '@/lib/auth/session'
 
-// Simple in-memory rate limiting per IP. Resets after the window.
-// (A single-instance dev server is fine; for multi-instance use Redis.)
-const WINDOW_MS = 15 * 60 * 1000 // 15 min
-const MAX_ATTEMPTS = 10
+// Rate limiting per IP (in-memory).
+// Set AUTH_RATE_LIMIT_MAX=0 to disable rate limiting entirely.
+// For multi-instance k8s, consider disabling this and using an ingress-level
+// rate limiter instead — in-memory counters don't share across pods.
+const WINDOW_MS = Number(process.env.AUTH_RATE_LIMIT_WINDOW_MS) || 15 * 60 * 1000 // 15 min
+const MAX_ATTEMPTS = (() => {
+  const v = process.env.AUTH_RATE_LIMIT_MAX
+  if (v === undefined || v === '') return 10 // default
+  return Number(v) // 0 = disable
+})()
 const attempts = new Map<string, { count: number; first: number }>()
 
 function rateLimited(ip: string): boolean {
+  if (MAX_ATTEMPTS <= 0) return false // disabled
   const now = Date.now()
   const entry = attempts.get(ip)
   if (!entry || now - entry.first > WINDOW_MS) {
@@ -46,9 +53,22 @@ export async function POST(request: NextRequest) {
 
   const token = createSessionToken(username)
   const res = NextResponse.json({ success: true })
+
+  // Determine if the cookie should be `secure`:
+  //   1. COOKIE_SECURE env var (explicit override)
+  //   2. x-forwarded-proto header (reverse proxy)
+  //   3. Fall back to request protocol (direct connection)
+  const forwardedProto = request.headers.get('x-forwarded-proto')
+  const secure =
+    process.env.COOKIE_SECURE !== undefined
+      ? process.env.COOKIE_SECURE === 'true'
+      : forwardedProto
+        ? forwardedProto === 'https'
+        : request.nextUrl.protocol === 'https:'
+
   res.cookies.set(SESSION_COOKIE_NAME, token, {
     httpOnly: true,
-    secure: process.env.NODE_ENV === 'production',
+    secure,
     sameSite: 'lax',
     path: '/',
     maxAge: SESSION_COOKIE_MAX_AGE,

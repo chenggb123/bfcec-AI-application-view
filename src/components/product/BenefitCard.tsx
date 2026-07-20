@@ -30,12 +30,11 @@ export function BenefitCard({ benefit, index }: BenefitCardProps) {
 
   return (
     <div
-      className="group transition-all duration-300"
+      className="group transition-all duration-300 p-5 sm:p-8"
       style={{
         background: 'var(--surface-tint)',
         border: '1px solid var(--border)',
         borderRadius: '16px',
-        padding: '32px',
       }}
       onMouseEnter={(e) => {
         const el = e.currentTarget
@@ -51,13 +50,13 @@ export function BenefitCard({ benefit, index }: BenefitCardProps) {
       {/* Number */}
       <div className="flex items-baseline gap-[4px]">
         <span
-          className="font-mono text-[46px] font-bold tracking-[-0.04em] leading-none tabular-nums"
+          className="font-mono text-[34px] sm:text-[46px] font-bold tracking-[-0.04em] leading-none tabular-nums"
           style={{ color: 'var(--accent)' }}
         >
           {benefit.value}
         </span>
         <span
-          className="font-mono text-[20px] font-medium"
+          className="font-mono text-[16px] sm:text-[20px] font-medium"
           style={{ color: 'var(--accent)' }}
         >
           {isZh ? benefit.unit : (benefit.unitEn || benefit.unit)}

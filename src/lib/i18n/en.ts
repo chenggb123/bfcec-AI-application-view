@@ -4,7 +4,7 @@ export const en: Record<string, string> = {
   navHome: 'Home',
   navProducts: 'Products',
   navAdmin: 'Admin',
-  heroEyebrow: 'Enterprise Application Systems',
+  heroEyebrow: 'BFCEC AI Platform',
   heroTitle: 'AI-Driven Intelligent Transformation',
   heroDesc: 'We build efficient, reliable application systems and AI products for enterprises, covering efficiency tools, smart quality, smart factory, and more, helping businesses continuously evolve.',
   heroCta: 'Browse All Products',

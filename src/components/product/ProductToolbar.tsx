@@ -62,27 +62,37 @@ export function ProductToolbar({ products, categories, onFilter }: ProductToolba
   }, [products, activeZh, searchQuery, isZh])
 
   return (
-    <div className="flex items-center gap-[16px] flex-wrap" style={{ marginBottom: '24px' }}>
-      <SearchBox
-        placeholder={t('searchPlaceholder')}
-        value={searchQuery}
-        onChange={handleSearch}
-        className="flex-1 min-w-[240px] max-w-[400px]"
-      />
+    <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4 sm:flex-wrap" style={{ marginBottom: '24px' }}>
+      {/* Search — full width on mobile */}
+      <div className="w-full sm:flex-1 sm:min-w-[200px] sm:max-w-[400px]">
+        <SearchBox
+          placeholder={t('searchPlaceholder')}
+          value={searchQuery}
+          onChange={handleSearch}
+          className="w-full"
+        />
+      </div>
 
-      <Chip active={activeZh === ''} onClick={() => handleCategory('')}>
-        {t('allFilter')}
-      </Chip>
-
-      {categories.map(({ zh, en }) => (
-        <Chip key={zh} active={activeZh === zh} onClick={() => handleCategory(zh)}>
-          {isZh ? zh : en}
+      {/* Chips row: horizontal scroll on mobile */}
+      <div className="flex items-center gap-2 flex-nowrap overflow-x-auto pb-1 sm:pb-0 sm:flex-wrap sm:overflow-visible"
+        style={{ scrollbarWidth: 'none', WebkitOverflowScrolling: 'touch' }}>
+        <Chip active={activeZh === ''} onClick={() => handleCategory('')}>
+          {t('allFilter')}
         </Chip>
-      ))}
 
-      <span className="font-mono text-[13px] tracking-[0.04em] ml-auto whitespace-nowrap" style={{ color: 'var(--muted)' }}>
-        {count} / {products.length}
-      </span>
+        {categories.map(({ zh, en }) => (
+          <Chip key={zh} active={activeZh === zh} onClick={() => handleCategory(zh)}>
+            {isZh ? zh : en}
+          </Chip>
+        ))}
+
+        <span
+          className="font-mono text-[13px] tracking-[0.04em] whitespace-nowrap ml-2 sm:ml-auto shrink-0"
+          style={{ color: 'var(--muted)' }}
+        >
+          {count} / {products.length}
+        </span>
+      </div>
     </div>
   )
 }

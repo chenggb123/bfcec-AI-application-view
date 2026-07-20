@@ -4,7 +4,7 @@ export const zh: Record<string, string> = {
   navHome: '首页',
   navProducts: '产品',
   navAdmin: '管理',
-  heroEyebrow: '企业应用系统',
+  heroEyebrow: '福康AI平台',
   heroTitle: '以AI驱动智能化转型',
   heroDesc: '我们为企业打造高效、可靠的应用系统与 AI 产品，覆盖效率工具、智能质量、智能工厂等多个领域，助力业务持续进化。',
   heroCta: '浏览全部产品',

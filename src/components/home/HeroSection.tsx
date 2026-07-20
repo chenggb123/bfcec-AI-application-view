@@ -4,6 +4,9 @@ import { useRef, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
 import { useI18n } from '@/lib/i18n'
 import { Button } from '@/components/ui/Button'
+import dynamic from 'next/dynamic'
+
+const Aurora = dynamic(() => import('@/components/home/Aurora'), { ssr: false })
 
 export function HeroSection() {
   const heroRef = useRef<HTMLDivElement>(null)
@@ -78,60 +81,75 @@ export function HeroSection() {
         }
 
         @media (max-width: 640px) {
-          .hero-container {
-            padding: 100px 16px 80px;
-          }
           .hero-title {
             font-size: clamp(28px, 8vw, 34px);
           }
         }
       `}</style>
 
+      {/* Full-width Aurora background */}
       <div
-        ref={heroRef}
-        className="hero-container relative z-[1] pt-[140px] pb-[120px] px-10 max-w-[1000px] mx-auto text-center"
-        style={{ padding: '140px 40px 120px' }}
-        onMouseMove={handleMouseMove}
+        style={{
+          position: 'relative',
+          width: '100%',
+          overflow: 'hidden',
+        }}
       >
-        {/* Mouse-tracking glow */}
-        <div className="hero-glow" />
-
-        {/* Eyebrow */}
-        <div style={{ marginBottom: '28px' }}>
-          <span
-            style={{
-              fontFamily: 'var(--font-mono)',
-              fontSize: '12px',
-              fontWeight: 600,
-              letterSpacing: '0.12em',
-              textTransform: 'uppercase',
-              color: '#DA291C',
-            }}
-          >
-            {t('heroEyebrow')}
-          </span>
-          <div className="hero-eyebrow-line" />
-        </div>
-
-        {/* Title */}
-        <h1 className="hero-title">{t('heroTitle')}</h1>
-
-        {/* Description */}
-        <p
+        <div
           style={{
-            fontSize: '18px',
-            lineHeight: 1.65,
-            color: 'var(--muted)',
-            maxWidth: '620px',
-            margin: '0 auto 44px',
-            textWrap: 'pretty',
+            position: 'absolute',
+            inset: 0,
+            zIndex: 0,
+            pointerEvents: 'none',
           }}
         >
-          {t('heroDesc')}
-        </p>
+          <Aurora
+            colorStops={['#005587', '#5227FF', '#DA291C']}
+            blend={0.5}
+            amplitude={1.0}
+            speed={0.5}
+          />
+        </div>
 
-        {/* CTA Button */}
-        <span className="hero-cta-wrapper inline-flex">
+        {/* Mouse-tracking glow */}
+        <div className="hero-glow" style={{ zIndex: 1 }} />
+
+        {/* Content */}
+        <div
+          ref={heroRef}
+          className="hero-container relative z-[2] px-4 sm:px-8 lg:px-10 pt-[100px] pb-[80px] sm:pt-[120px] sm:pb-[100px] lg:pt-[140px] lg:pb-[120px] max-w-[1000px] mx-auto text-center"
+          onMouseMove={handleMouseMove}
+        >
+          {/* Eyebrow */}
+          <div style={{ marginBottom: '28px' }}>
+            <span
+              style={{
+                fontFamily: 'var(--font-mono)',
+                fontSize: '12px',
+                fontWeight: 600,
+                letterSpacing: '0.12em',
+                textTransform: 'uppercase',
+                color: '#DA291C',
+              }}
+            >
+              {t('heroEyebrow')}
+            </span>
+            <div className="hero-eyebrow-line" />
+          </div>
+
+          {/* Title */}
+          <h1 className="hero-title">{t('heroTitle')}</h1>
+
+          {/* Description */}
+          <p
+            className="text-[15px] sm:text-[18px] leading-[1.65] max-w-[620px] mx-auto mb-10 sm:mb-11 text-pretty"
+            style={{ color: 'var(--muted)' }}
+          >
+            {t('heroDesc')}
+          </p>
+
+          {/* CTA Button */}
+          <span className="hero-cta-wrapper inline-flex">
           <Button
             variant="primary"
             size="lg"
@@ -159,6 +177,7 @@ export function HeroSection() {
             {t('heroCta')}
           </Button>
         </span>
+        </div>
       </div>
     </>
   )

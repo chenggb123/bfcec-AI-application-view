@@ -40,15 +40,7 @@ export function PageHeader({
         {/* Title + description group */}
         <div>
           <h1
-            style={{
-              fontFamily: 'var(--font-display)',
-              fontSize: '44px',
-              fontWeight: 700,
-              letterSpacing: '-0.03em',
-              lineHeight: 1.12,
-              marginBottom: '10px',
-            }}
-            className="max-sm:text-[30px]"
+            className="font-display text-[30px] sm:text-[38px] lg:text-[44px] font-bold tracking-[-0.03em] leading-[1.12] mb-[10px]"
           >
             {title}
           </h1>

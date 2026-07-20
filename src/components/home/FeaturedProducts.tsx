@@ -17,18 +17,12 @@ export function FeaturedProducts({ products }: FeaturedProductsProps) {
       <style>{`
         .feat-grid > * { min-width: 0; }
         @media (max-width: 1024px) {
-          .feat-grid { grid-template-columns: repeat(2, 1fr); }
-        }
-        @media (max-width: 640px) {
-          .feat-grid { grid-template-columns: 1fr; }
-          .feat-section { padding: 56px 16px; }
-          .feat-section h2 { font-size: 26px; }
+          .feat-grid { grid-template-columns: 1fr !important; gap: 16px; }
         }
       `}</style>
 
       <section
-        className="feat-section section relative z-[1] py-24 px-10 max-w-[1200px] mx-auto"
-        style={{ padding: '80px 40px' }}
+        className="feat-section section relative z-[1] px-4 sm:px-8 lg:px-10 pt-16 sm:pt-20 pb-16 sm:pb-24 max-w-[1200px] mx-auto"
       >
         <Reveal>
           <span
@@ -48,14 +42,7 @@ export function FeaturedProducts({ products }: FeaturedProductsProps) {
         </Reveal>
         <Reveal delay={2}>
           <h2
-            style={{
-              fontFamily: 'var(--font-display)',
-              fontSize: '38px',
-              fontWeight: 700,
-              letterSpacing: '-0.025em',
-              lineHeight: 1.18,
-              marginBottom: '16px',
-            }}
+            className="font-display text-[26px] sm:text-[32px] lg:text-[38px] font-bold tracking-[-0.025em] leading-[1.18] mb-4"
           >
             {t('featTitle')}
           </h2>

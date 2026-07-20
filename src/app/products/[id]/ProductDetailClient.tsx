@@ -20,16 +20,10 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
   /* ── Not-found state ── */
   if (!product) {
     return (
-      <div className="detail" style={{ maxWidth: '1200px', margin: '0 auto', padding: '56px 40px 80px' }}>
-        <div className="not-found" style={{ textAlign: 'center', padding: '80px 0' }}>
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-8 lg:px-10 pt-10 sm:pt-14 pb-16 sm:pb-20">
+        <div className="text-center py-16 sm:py-20">
           <h2
-            style={{
-              fontFamily: 'var(--font-display)',
-              fontSize: '32px',
-              fontWeight: 700,
-              letterSpacing: '-0.025em',
-              marginBottom: '12px',
-            }}
+            className="font-display text-[24px] sm:text-[32px] font-bold tracking-[-0.025em] mb-3"
           >
             {t('notFoundTitle')}
           </h2>
@@ -120,13 +114,13 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
         }
         .detail-section-title {
           font-family: var(--font-display);
-          font-size: 28px;
+          font-size: 22px;
           font-weight: 700;
           letter-spacing: -0.02em;
-          margin-bottom: 24px;
+          margin-bottom: 20px;
         }
         .detail-section {
-          margin-bottom: 56px;
+          margin-bottom: 40px;
         }
         .benefits-grid {
           display: grid;
@@ -167,15 +161,35 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
             grid-template-columns: repeat(2, 1fr);
           }
         }
+        @media (min-width: 768px) {
+          .detail-section-title {
+            font-size: 28px;
+            margin-bottom: 24px;
+          }
+          .detail-section {
+            margin-bottom: 56px;
+          }
+        }
         @media (max-width: 640px) {
           .detail {
             padding: 32px 16px 64px;
           }
           .detail-title {
-            font-size: 28px;
+            font-size: 26px;
+          }
+          .detail-desc {
+            font-size: 15px;
+          }
+          .detail-meta {
+            flex-wrap: wrap;
+            gap: 8px;
+          }
+          .back-link {
+            margin-bottom: 24px;
           }
           .benefits-grid {
             grid-template-columns: 1fr;
+            gap: 16px;
           }
         }
       `}</style>
